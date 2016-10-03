@@ -1,0 +1,125 @@
+//==============================================================================
+//  Prettify: Lara Honya Night
+//==============================================================================
+
+pre {
+  &.prettyprint {
+    word-wrap: normal;
+    background: #333 !important;
+
+    code {
+      margin: 0;
+      color: #fff;
+    }
+  }
+
+  .nocode {
+    color: #000;
+    background-color: none;
+  }
+
+  .str {
+    color: #f0e68c;
+  }
+
+  .kwd {
+    font-weight: bold;
+    color: #ffa0bb;
+  }
+
+  .com {
+    color: #999;
+  }
+
+  .typ {
+    color: #90ebc8;
+  }
+
+  .lit {
+    color: #cdb2ff;
+  }
+
+  .pun {
+    color: #ccc;
+  }
+
+  .pln {
+    color: #eee;
+  }
+
+  .tag {
+    color: #f0e68c;
+  }
+
+  .atn {
+    color: #bbb;
+  }
+
+  .atv {
+    color: #ffa0d6;
+  }
+
+  .dec {
+    color: #90ebc8;
+  }
+}
+
+.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #aeaeae;
+}
+
+.L0,
+.L1,
+.L2,
+.L3,
+.L5,
+.L6,
+.L7,
+.L8 {
+  list-style-type: none;
+}
+
+@media print {
+  pre {
+    &.prettify {
+      background-color: none;
+    }
+
+    .str {
+      color: #060;
+    }
+    .kwd {
+      font-weight: bold;
+      color: #006;
+    }
+    .com {
+      font-style: italic;
+      color: #600;
+    }
+    .typ {
+      font-weight: bold;
+      color: #404;
+    }
+    .lit {
+      color: #044;
+    }
+    .pun {
+      color: #440;
+    }
+    .pln {
+      color: #000;
+    }
+    .tag {
+      font-weight: bold;
+      color: #006;
+    }
+    .atn {
+      color: #404;
+    }
+    .atv {
+      color: #060;
+    }
+  }
+}

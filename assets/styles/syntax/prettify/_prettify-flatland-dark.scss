@@ -1,0 +1,125 @@
+//==============================================================================
+//  Prettify: Custom Flatland Dark
+//==============================================================================
+
+pre {
+  &.prettyprint {
+    word-wrap: normal;
+    background: #26292c !important;
+
+    code {
+      margin: 0;
+      color: #fff;
+    }
+  }
+
+  .nocode {
+    color: #000;
+    background-color: none;
+  }
+
+  .str {
+    color: #c4e2f2;
+  }
+
+  .kwd {
+    font-weight: bold;
+    color: #d19fde;
+  }
+
+  .com {
+    color: #798188;
+  }
+
+  .typ {
+    color: #ffb454;
+  }
+
+  .lit {
+    color: #b7d877;
+  }
+
+  .pun {
+    color: #f8f8f8;
+  }
+
+  .pln {
+    color: #eee;
+  }
+
+  .tag {
+    color: #d19fde;
+  }
+
+  .atn {
+    color: #8fceab;
+  }
+
+  .atv {
+    color: #ffa0d6;
+  }
+
+  .dec {
+    color: #ffb454;
+  }
+}
+
+.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #aeaeae;
+}
+
+.L0,
+.L1,
+.L2,
+.L3,
+.L5,
+.L6,
+.L7,
+.L8 {
+  list-style-type: none;
+}
+
+@media print {
+  pre {
+    &.prettify {
+      background-color: none;
+    }
+
+    .str {
+      color: #060;
+    }
+    .kwd {
+      font-weight: bold;
+      color: #006;
+    }
+    .com {
+      font-style: italic;
+      color: #600;
+    }
+    .typ {
+      font-weight: bold;
+      color: #404;
+    }
+    .lit {
+      color: #044;
+    }
+    .pun {
+      color: #440;
+    }
+    .pln {
+      color: #000;
+    }
+    .tag {
+      font-weight: bold;
+      color: #006;
+    }
+    .atn {
+      color: #404;
+    }
+    .atv {
+      color: #060;
+    }
+  }
+}

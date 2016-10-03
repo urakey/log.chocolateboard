@@ -1,0 +1,21 @@
+//==============================================================================
+//  Module: Content
+//==============================================================================
+
+.contents {
+  @extend %clearfix;
+  @include media-queries(large) {
+    width: 100%;
+    min-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  @include media-queries(small) {
+    padding: 0 15px;
+  }
+
+  width: $content-width;
+  min-width: $content-width;
+  padding: 0 30px;
+  margin: 0 auto;
+}

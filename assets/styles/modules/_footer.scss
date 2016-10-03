@@ -1,0 +1,106 @@
+//==============================================================================
+//  Module: Footer
+//==============================================================================
+
+.footer {
+  @include link-color($key-color-1, $key-color-1, none, none, white);
+  @include media-queries(large) {
+    min-width: 100%;
+  }
+  @include media-queries(medium) {
+    text-align: center;
+  }
+
+  position: relative;
+  width: 100%;
+  min-width: $content-width + 60px;
+  letter-spacing: .1em;
+  color: $key-color-2-ll;
+  background: $key-color-2;
+}
+
+.footer__byline {
+  padding: 15px 30px 0;
+  p {
+    display: inline-block;
+  }
+}
+
+.footer__license {
+  padding: 0 30px 15px;
+  margin-top: 0;
+  font-style: italic;
+}
+
+.footer__social {
+  @include link-color($key-color-2, $key-color-2, none, none, $key-color-1);
+  @include media-queries(medium) {
+    position: relative;
+    right: 0;
+    padding: 0 10px;
+  }
+
+  position: absolute;
+  top: 0;
+  right: 30px;
+  padding: 0;
+
+  ul {
+    @extend %resetlist;
+    @include media-queries(medium) {
+      margin-top: 0;
+    }
+
+    display: inline-block;
+  }
+  li {
+    display: inline-block;
+    margin: 0 3px;
+  }
+  a {
+    border-radius: 1.5rem;
+
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    line-height: 3rem;
+    letter-spacing: 0;
+    text-align: center;
+    background: $key-color-2-l;
+    &:hover {
+      transition-property: color, background-color;
+      transition-duration: .3s;
+
+      background: white;
+    }
+  }
+
+  $class: twitter facebook pinterest github feed;
+  $icon: "\f099" "\f082" "\f0d2" "\f09b" "\f09e";
+  $length: length($class);
+
+  @for $i from 1 through $length {
+
+    &_#{nth($class, $i)} {
+
+      a {
+        &::before {
+          @extend %icon;
+          display: block;
+          margin: 0 auto;
+          content: nth($icon, $i);
+          font-size: 1.3rem;
+          @if $i > 2 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer__links {
+  padding: 15px 30px;
+  background: $key-color-2-d;
+}

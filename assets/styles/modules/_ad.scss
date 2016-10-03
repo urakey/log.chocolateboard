@@ -1,0 +1,49 @@
+//==============================================================================
+//  Module: AD
+//==============================================================================
+
+.ad--300 {
+  @include media-queries(large) {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  text-align: center;
+
+  ins {
+    display: inline-block;
+    min-width: 300px;
+  }
+}
+
+.ad--125 {
+  ul {
+    @extend %resetlist;
+    @extend %clearfix;
+    @include media-queries(small) {
+      li {
+        padding: 8px;
+        margin-top: 7px;
+        &:nth-child(2n) {
+          margin-left: 7px;
+        }
+      }
+    }
+
+    max-width: 300px;
+    margin: 0 auto;
+    li {
+      float: left;
+      padding: 10px;
+      margin-top: 10px;
+      background: $background;
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+      &:nth-child(2n) {
+        margin-left: 9px;
+      }
+    }
+  }
+}

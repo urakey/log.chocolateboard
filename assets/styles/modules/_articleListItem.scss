@@ -1,0 +1,50 @@
+//==============================================================================
+//  Module: Article list item
+//==============================================================================
+
+.articleListItem {
+  box-sizing: border-box;
+}
+
+.articleListItem__eyecatch {
+  min-height: 150px;
+  margin: 0 0 $mlv5;
+  background-image: url($base-image + "/svg/bg.svg");
+  background-position: center center;
+  background-repeat: repeat;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.articleListItem__project {
+  margin: 0;
+}
+
+.articleListItem__title {
+  @include font-size(18);
+  @include lineclamp(1);
+  @include link-color($base-color, $base-color, "none", "none", $base-color, true);
+  @include media-queries(small) {
+    @include lineclamp(2);
+  }
+
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.articleListItem__body {
+  @extend %notes;
+
+  margin: .5em 0;
+
+  p {
+    @include lineclamp(2);
+
+    height: 3em;
+    margin: 0;
+  }
+}

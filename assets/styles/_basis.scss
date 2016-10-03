@@ -1,0 +1,33 @@
+//==============================================================================
+//  Basis
+//==============================================================================
+
+body {
+  @include font-size(15);
+  @include media-queries(medium) {
+    letter-spacing: 0;
+  }
+
+  font-family: $base-font;
+  line-height: 1.7;
+  letter-spacing: .1em;
+  color: $base-color;
+  background: $base-background;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+input,
+textarea {
+  @include font-size(16);
+
+  outline: none;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: white;
+  background: $key-color-2-ll;
+}

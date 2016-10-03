@@ -1,0 +1,24 @@
+Baseurl          = 'http://log.chocolateboard.net'
+LegalanguageCode = 'ja-JP'
+HasCJKLanguage   = true
+Title            = 'log.chocolateboard'
+Publishdir       = 'docs'
+Paginate         = 12
+
+[Author]
+name = 'Aki Fukayama'
+url  = '/about/'
+
+[Params]
+description = 'ここは、Web 制作についてのメモ置き場です。読んでくれる誰かのことを想って書いています。'
+feed        = '/feed.rss'
+portfolio   = 'http://chocolateboard.net'
+twitter     = 'https://twitter.com/urakey'
+facebook    = 'https://www.facebook.com/urakey'
+pinterest   = 'http://pinterest.com/urakey'
+github      = 'https://github.com/urakey'
+archives    = ['2011', '2012', '2013', '2014', '2015', '2016']
+
+[Taxonomies]
+tags       = 'tags'
+categories = 'categories'

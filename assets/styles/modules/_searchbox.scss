@@ -1,0 +1,38 @@
+//==============================================================================
+//  Module: Searchbox
+//==============================================================================
+
+.searchbox {
+  @extend %base;
+
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.searchbox__text {
+  display: table-cell;
+  width: 80%;
+
+  input[name="q"],
+  input[type="text"] {
+    width: 98%;
+    padding: 8px 10px;
+    margin-right: 5px;
+    background-position: 5% 50% !important;
+    border: $border 1px solid;
+  }
+}
+
+.searchbox__submit {
+  display: table-cell;
+  width: 20%;
+
+  input[type="submit"] {
+    @extend %btn;
+
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+  }
+}

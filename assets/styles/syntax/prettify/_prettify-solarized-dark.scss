@@ -1,0 +1,119 @@
+//==============================================================================
+//  Prettify: Custom Solarized Dark
+//==============================================================================
+
+pre {
+  &.prettyprint {
+    word-wrap: normal;
+    background: #002b36 !important;
+
+    code {
+      margin: 0;
+      color: #fff;
+    }
+  }
+
+  .nocode {
+    color: inherit;
+    background-color: none;
+  }
+
+  .pln {
+    color: #839496;
+  }
+
+  .str,
+  .lit,
+  .atv {
+    color: #2aa198;
+  }
+
+  .kwd {
+    font-weight: bold;
+    color: #268bd2;
+  }
+
+  .com,
+  .dec {
+    color: #586e75;
+  }
+
+  .typ {
+    color: #b58900;
+  }
+
+  .pun,
+  .opn,
+  .clo {
+    color: #839496;
+  }
+
+  .tag {
+    font-weight: bold;
+    color: #268bd2;
+  }
+
+  .atn {
+    color: #839496;
+  }
+}
+
+.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #aeaeae;
+}
+
+.L0,
+.L1,
+.L2,
+.L3,
+.L5,
+.L6,
+.L7,
+.L8 {
+  list-style-type: none;
+}
+
+@media print {
+  pre {
+    &.prettify {
+      background-color: none;
+    }
+
+    .str {
+      color: #060;
+    }
+    .kwd {
+      font-weight: bold;
+      color: #006;
+    }
+    .com {
+      font-style: italic;
+      color: #600;
+    }
+    .typ {
+      font-weight: bold;
+      color: #404;
+    }
+    .lit {
+      color: #044;
+    }
+    .pun {
+      color: #440;
+    }
+    .pln {
+      color: #000;
+    }
+    .tag {
+      font-weight: bold;
+      color: #006;
+    }
+    .atn {
+      color: #404;
+    }
+    .atv {
+      color: #060;
+    }
+  }
+}

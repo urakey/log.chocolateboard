@@ -1,0 +1,369 @@
+//==============================================================================
+//  Module: Article
+//==============================================================================
+
+.article__title {
+  @include font-size(28);
+  @include media-queries(small) {
+    @include font-size(22);
+  }
+
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.article__eyecatch {
+  margin: $mlv4 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    @include link-color($key-color-2-ll, $key-color-2-ll);
+    @extend %notes;
+
+    margin: .5em 0;
+    font-style: italic;
+  }
+}
+
+.article__body {
+  @extend %clearfix;
+
+  margin: $mlv2 0 0;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    & + p,
+    & + ul {
+      margin-top: -.3em;
+    }
+  }
+  h2 {
+    @include font-size(26);
+
+    padding-bottom: .5em;
+    margin-top: $mlv2;
+    margin-bottom: $mlv4;
+    font-weight: normal;
+    line-height: 1.2;
+    border-bottom: $border 1px solid;
+    &::before {
+      position: relative;
+      top: 0;
+      display: inline-block;
+      width: 0;
+      height: 5px;
+      margin-right: .5em;
+      border-color: $key-color-1 $key-color-1 transparent $key-color-1;
+      border-style: solid;
+      border-width: 6px;
+      content: "";
+    }
+  }
+  h3 {
+    @include font-size(22);
+
+    padding-bottom: .5em;
+    margin-top: $mlv3;
+    font-weight: normal;
+    line-height: 1.2;
+    border-bottom: $border 1px solid;
+  }
+  h4 {
+    @include font-size(18);
+
+    padding-left: .7em;
+    margin-top: $mlv4;
+    line-height: 1.2;
+    border-left: $border 5px solid;
+  }
+  h5,
+  h6 {
+    @include font-size(16);
+
+    margin-top: $mlv4;
+    line-height: 1.2;
+  }
+  hr {
+    height: 1em;
+    margin: $mlv2 auto;
+    border: none;
+    opacity: .1;
+    &::before {
+      display: block;
+      height: 100%;
+      background-image: url($base-image + "/svg/hr.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "\0020";
+    }
+  }
+  strong {
+    padding: 0 .3em;
+    background: $key-color-2-lll;
+    border-bottom: $base-color 1px dotted;
+  }
+  em {
+    padding: 0 .3em;
+    font-style: normal;
+    background: $key-color-2-lll;
+  }
+  mark {
+    // padding: 0 .2em;
+    // background: $key-yellow + 150;
+  }
+  ins {
+    border-bottom: $base-color 1px double;
+  }
+  code {
+    @extend %radius;
+
+    padding: 2px 4px;
+    margin: 0 3px;
+    font-family: $code-font;
+    font-size: 12px;
+    white-space: normal;
+    background: $background;
+    border: $border 1px solid;
+  }
+  pre {
+    @extend %base;
+    @include media-queries(large) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    padding: 20px;
+    margin: $mlv4 0 $mlv4 $mlv5;
+    overflow: auto;
+    line-height: 1.2;
+    code {
+      padding: 0;
+      margin: 0;
+      white-space: pre-wrap;
+      white-space: pre;
+      background: none;
+      border: none;
+    }
+  }
+  ul {
+    @extend %resetlist;
+    @include media-queries(large) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    margin: $mlv4 0 $mlv4 $mlv5;
+    li {
+      &::before {
+        @extend %icon;
+
+        margin-right: .3em;
+        color: $key-color-1;
+        content: "\f1db";
+      }
+    }
+  }
+  ol {
+    @include media-queries(large) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    margin: $mlv4 0 $mlv4 $mlv5;
+  }
+  table {
+    @include media-queries(medium) {
+      table {
+        overflow: auto;
+      }
+      // th, td {
+      //   display: block;
+      //   box-sizing: border-box;
+      //   width: 100%;
+      // }
+    }
+    @include media-queries(large) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    margin: $mlv4 0 $mlv4 $mlv5;
+    background: white;
+    border-bottom: $border 1px solid;
+    border-left: $border 1px solid;
+    th {
+      min-width: 3em;
+      padding: 10px;
+      font-weight: bold;
+      white-space: nowrap;
+      background: $background;
+      border-top: $border 1px solid;
+      border-right: $border 1px solid;
+    }
+    td {
+      padding: 10px;
+      border-top: $border 1px solid;
+      border-right: $border 1px solid;
+    }
+  }
+  figure {
+    @include media-queries(large) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    max-width: 100%;
+    margin: $mlv4 0 $mlv4 $mlv5;
+    img {
+      max-width: 100%;
+      min-height: 176px;
+      box-shadow: rgba($key-color-2, .2) 1px 1px 5px -1px;
+    }
+    figcaption {
+      @include link-color($key-color-2-ll, $key-color-2-ll);
+      @extend %notes;
+
+      margin: .5em 0;
+      font-style: italic;
+    }
+  }
+  blockquote {
+    @extend %base;
+    @include font-size(14);
+    @include media-queries(large) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    position: relative;
+    margin: $mlv4 0 $mlv4 $mlv5;
+    &::before {
+      @include font-size(30);
+      @extend %icon;
+
+      position: absolute;
+      top: 0;
+      left: 10px;
+      color: $key-color-2-ll;
+      content: "\f10d";
+    }
+    &::after {
+      @include font-size(30);
+      @extend %icon;
+
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      color: $key-color-2-ll;
+      content: "\f10e";
+    }
+    cite {
+      @extend %notes;
+      a {
+        padding-left: .5em;
+      }
+      &::before {
+        content: "\002014";
+      }
+    }
+  }
+}
+
+.article__footer {
+  @include font-size(12);
+  @include link-color($key-color-2-ll, $key-color-2-ll, "none", "none", $key-color-2-ll, true);
+
+  color: $key-color-2-ll;
+  ul {
+    @extend %resetlist;
+  }
+  li {
+    display: inline-block;
+    letter-spacing: .05em;
+
+    & + li {
+      margin-left: 1rem;
+    }
+
+    &::before {
+      @extend %icon;
+
+      margin: 0 5px 0 0;
+      color: $key-color-1;
+    }
+  }
+  span {
+    display: none;
+  }
+}
+.article__footerTime::before {
+  content: "\f073";
+}
+.article__footerCategories::before {
+  content: "\f07b";
+}
+.article__footerTags::before {
+  content: "\f02c";
+}
+
+
+
+.article__sectionTitle {
+  @extend %title;
+
+  margin: $mlv1 0 2em;
+}
+
+.article__sectionList {
+  @extend %list;
+}
+
+.article__sectionShare {
+  @extend %resetlist;
+  @extend %radius;
+  @include media-queries(medium) {
+    font-size: 0;
+    li {
+      display: inline-block;
+      width: 50%;
+      &:nth-child(1),
+      &:nth-child(4) {
+        background: $background;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        background: white;
+      }
+    }
+  }
+
+  display: table;
+  width: 100%;
+  text-align: center;
+  border: $border 1px solid;
+  box-sizing: border-box;
+
+  li {
+    display: table-cell;
+    min-width: 80px;
+    padding: 10px;
+    line-height: 1;
+    vertical-align: top;
+    box-sizing: border-box;
+    &:nth-child(odd) {
+      background: $background;
+    }
+    &:nth-child(even) {
+      background: white;
+    }
+  }
+}

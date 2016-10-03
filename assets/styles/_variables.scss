@@ -1,0 +1,47 @@
+//==============================================================================
+//  Variables
+//==============================================================================
+
+// Base Colors
+$key-pink:      #f5abb5;
+$key-choco:     #594847;
+
+// SNS Brand Colors
+$key-color-1: $key-pink;
+$key-color-2: $key-choco;
+
+$key-color-2-l:    lighten($key-color-2, 25%);
+$key-color-2-ll:   lighten($key-color-2, 35%);
+$key-color-2-lll:  lighten($key-color-2, 60%);
+$key-color-2-llll: lighten($key-color-2, 65%);
+$key-color-2-d:    darken($key-color-2, 5%);
+
+// Content Base Setting
+$base-image: "/assets/images";
+$base-font: "PT Sans", Helvetica, Arial, "YuGothic", "Kozuka Gothic std", sans-serif;
+$code-font: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, monospace;
+$logo-font: "Alegreya Sans SC", sans-serif;
+
+$base-background:         white;
+$base-color:              $key-color-2;
+$base-link-color:         $key-color-2-l;
+$base-link-color-visited: $key-color-2-l;
+
+$content-width:      990px;
+$content-width-main: 640px;
+$content-width-sub:  300px;
+
+$background: $key-color-2-llll;
+$border:     $key-color-2-lll;
+$image: "cmn_sprite_icon.png" !default;
+$break-large:  990px;
+$break-medium: 700px;
+$break-small:  480px;
+$break-xsmall: 320px;
+
+// Other
+$mlv1: 5rem;
+$mlv2: 4rem;
+$mlv3: 3rem;
+$mlv4: 2rem;
+$mlv5: 1rem;

@@ -1,0 +1,14 @@
+//==============================================================================
+//  Module: Class
+//==============================================================================
+
+.pinterest {
+  @include media-queries(xsmall) {
+    a[data-pin-log="embed_user_thumb"] {
+      max-width: 80px !important;
+    }
+  }
+
+  max-width: 770px;
+  margin: 0 auto;
+}

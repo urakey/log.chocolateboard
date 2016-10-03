@@ -1,0 +1,75 @@
+//==============================================================================
+//  Utility: Mixin
+//==============================================================================
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    display: block;
+    height: 0;
+    content: "\0020";
+    visibility: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin media-queries($media) {
+  @if $media == small {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  }
+  @else if $media == medium {
+    @media only screen and (max-width: $break-medium) {
+      @content;
+    }
+  }
+  @else if $media == large {
+    @media only screen and (max-width: $break-large) {
+      @content;
+    }
+  }
+}
+
+@mixin font-size($size) {
+  font-size: unquote(($size/16) + "rem");
+}
+
+@mixin lineclamp($num) {
+  display: -webkit-box;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+}
+
+@mixin link-color($color01, $color02: $base-link-color-visited, $underline01:"underline", $underline02:"none", $color03:$color01, $opacity:false) {
+  a {
+    color: $color01;
+    text-decoration: unquote($underline01);
+
+    &:visited {
+      color: $color02;
+    }
+
+    &:hover {
+      text-decoration: unquote($underline02);
+      @if $color03 {
+        color: $color03;
+      }
+
+      @if $opacity {
+        opacity: .6;
+        transition-duration: .3s;
+        transition-property: opacity;
+      }
+    }
+  }
+}

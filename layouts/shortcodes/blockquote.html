@@ -1,0 +1,8 @@
+<blockquote>
+  {{ .Inner | markdownify }}
+  {{ if and (.Get "cite") (.Get "citeLink") }}
+    <p><cite><a href="{{ .Get "citeLink" }}">rinkuari{{ .Get "cite" }}</a></cite></p>
+  {{ else if .Get "cite" }}
+    <p><cite>{{ .Get "cite" }}</cite></p>
+  {{ end }}
+</blockquote>

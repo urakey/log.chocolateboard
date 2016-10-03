@@ -1,0 +1,139 @@
+//==============================================================================
+//  Module: Sidebar
+//==============================================================================
+
+.sidebar {
+  @include link-color($base-link-color, $base-link-color, "underline", "none", $base-link-color, true);
+  @include media-queries(large) {
+    float: none;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  float: right;
+  width: $content-width-sub;
+  padding: 50px 0;
+  aside,
+  nav {
+    @include font-size(14);
+  }
+}
+
+.sidebar__title {
+  @extend %title;
+
+  margin: $mlv2 0 2em;
+}
+
+.sidebar__list {
+  @extend %list;
+  @include font-size(12);
+}
+
+.sidebar__list--tags {
+  @extend %resetlist;
+  @include font-size(12);
+  //  @extend .sidebar__list;
+  //
+  //  li::before {
+  //    content: "\f02b";
+  //  }
+
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin: 0 0 4px 14px;
+  }
+  a {
+    position: relative;
+    display: block;
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 12px;
+    color: white;
+    text-decoration: none;
+    background: $key-color-1;
+    border-radius: 0 3px 3px 0;
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      color: white;
+      opacity: .7;
+      transition-duration: .5s;
+      transition-property: opacity;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -20px;
+      display: block;
+      width: 0;
+      height: 4px;
+      border-color: transparent $key-color-1 transparent transparent;
+      border-style: solid;
+      border-width: 10px;
+      content: "";
+    }
+    &::after {
+      position: absolute;
+      top: 10px;
+      left: -4px;
+      display: block;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+      content: "";
+    }
+  }
+}
+
+.sidebar__list--categories {
+  @extend .sidebar__list;
+  li::before {
+    content: "\f07b";
+  }
+}
+
+.sidebar__list--archives {
+  @extend .sidebar__list;
+  li::before {
+    content: "\f187";
+  }
+}
+
+.sidebar__list--hatena {
+  @extend .sidebar__list;
+  li::before {
+    content: "\f097";
+  }
+}
+
+.sidebar__recommend {
+  @extend %base;
+
+  padding: 15px 10px 10px;
+  margin: 15px 0;
+  line-height: 1.5;
+  figure {
+    @extend %clearfix;
+
+    margin: 0 0 10px;
+    img {
+      float: left;
+      width: 100px;
+      box-shadow: rgba($key-color-2, .2) 1px 1px 5px -1px;
+    }
+    figcaption {
+      margin-left: 120px;
+    }
+  }
+  p {
+    @extend %notes;
+
+    margin: 0;
+  }
+}
