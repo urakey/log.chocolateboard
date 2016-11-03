@@ -13,7 +13,7 @@ Middleman 引っ越し done !! なのだけど、Feed の URL が WordPress の�
 
 GitHub Pages 上で、WordPress のときと同じスラッシュ終わりの URL にする方法がわからず（あるのかな？）URL 変更することに。
 
-{{% notice %}}Middleman 拡張すればできるかも？？わかんないけど！[にのくん](https://twitter.com/wakuworks) ありがとう★{{% /notice %}}
+{{% notes %}}Middleman 拡張すればできるかも？？わかんないけど！[にのくん](https://twitter.com/wakuworks) ありがとう★{{% /notes %}}
 
 GitHub Pages では、拡張子なしの feed は `application/octet-stream` で配信されるみたい。
 拡張子なしも試してみましたが、元の URL と同じにできないのだから、

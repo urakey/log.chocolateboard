@@ -4,7 +4,7 @@ title:      'JavaScript: 画像の上に文字がスライドインするやつ�
 categories: ['Coding']
 tags:       ['JavaScript', 'jQuery', 'Plugins']
 url:        '/jquery-aktextoverlay/'
-eyecatch:   '/assets/images/posts/2014/11/jquery-aktextoverlay/eyecatch.png'
+eyecatch:   '/assets/images/posts/2014/11/jquery-aktextoverlay/eyecatch.jpg'
 ---
 
 JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その1です。目標はその10くらいまで書くこと。

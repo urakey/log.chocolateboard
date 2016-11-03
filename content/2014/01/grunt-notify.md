@@ -31,7 +31,7 @@ eyecatch:   '/assets/images/posts/2014/01/grunt-notify/eyecatch.png'
 $ npm install grunt-notify --save-dev
 ```
 
-{{% notice %}} `--save-dev` はお好みで。{{% /notice %}}
+{{% notes %}} `--save-dev` はお好みで。{{% /notes %}}
 
 {{% /section %}}
 

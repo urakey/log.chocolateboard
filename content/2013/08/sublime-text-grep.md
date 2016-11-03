@@ -34,7 +34,7 @@ Sublime Text にも grep 機能があるので、オプション周りの覚書�
 
 {{< figure src="/assets/images/posts/2013/08/sublime-text-grep/01.png" alt="Sublime Text: grep" >}}
 
-{{% notice %}}[Flatland Theme](https://github.com/thinkpixellab/flatland) を使用しているため、見た目が異なる場合があります。{{% /notice %}}
+{{% notes %}}[Flatland Theme](https://github.com/thinkpixellab/flatland) を使用しているため、見た目が異なる場合があります。{{% /notes %}}
 
 {{% /section %}}
 

@@ -13,7 +13,7 @@ Sublime Text がすっかりお気に入りのエディタになりましたの�
 
 また、開発環境が mac なので、mac に寄った内容となっております。ご了承ください mm
 
-{{% notice %}}記事の内容は基本的には Sublime Text 2 の設定についてまとめています。Sublime Text 3 のベータ版も配布されていますので、違いのある設定については分かる範囲で触れています。{{% /notice %}}
+{{% notes %}}記事の内容は基本的には Sublime Text 2 の設定についてまとめています。Sublime Text 3 のベータ版も配布されていますので、違いのある設定については分かる範囲で触れています。{{% /notes %}}
 
 ---
 
@@ -101,7 +101,7 @@ Theme は Packaeg Control からインストールできる「Theme-Soda」を�
 
 - [Soda Theme](https://github.com/buymeasoda/soda-theme/)
 
-{{% notice %}}Theme を適用することで、サイドバーの色や各種アイコンなどを変えることができます。{{% /notice %}}
+{{% notes %}}Theme を適用することで、サイドバーの色や各種アイコンなどを変えることができます。{{% /notes %}}
 
 ### Color Scheme
 

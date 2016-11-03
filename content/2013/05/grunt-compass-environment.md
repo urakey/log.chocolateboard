@@ -65,7 +65,7 @@ environment = :production
 $ compass watch -e production
 ```
 
-{{% notice %}}'-e production' が environment のオプションです。{{% /notice %}}
+{{% notes %}}'-e production' が environment のオプションです。{{% /notes %}}
 
 ### 注意事項
 
@@ -75,7 +75,7 @@ $ compass watch -e production
 $ compass compile -e production --force
 ```
 
-{{% notice %}}'--force' オプションを付けることでファイルの変更の有無に関わらず強制的にコンパイルします。{{% /notice %}}
+{{% notes %}}'--force' オプションを付けることでファイルの変更の有無に関わらず強制的にコンパイルします。{{% /notes %}}
 
 {{% /section %}}
 
