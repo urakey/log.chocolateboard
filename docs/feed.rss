@@ -8,7 +8,128 @@
   <description>ここは、Web 制作についてのメモ置き場です。読んでくれる誰かのことを想って書いています。</description>
   <generator uri="https://gohugo.io">Hugo</generator>
   <creativeCommons:license>http://creativecommons.org/licenses/by-nc/4.0/</creativeCommons:license>
-  <lastBuildDate>Sun, 06 Mar 2016 00:00:00 UTC</lastBuildDate>
+  <lastBuildDate>Thu, 03 Nov 2016 00:00:00 UTC</lastBuildDate>
+  
+    <item>
+      <title>git: Git LFS を使ってみた</title>
+      <link>http://log.chocolateboard.net/git-lfs/</link>
+      <pubDate>Thu, 03 Nov 2016 00:00:00 UTC</pubDate>
+      <author>Aki Fukayama</author>
+      <guid>http://log.chocolateboard.net/git-lfs/</guid>
+      <description><![CDATA[
+
+<p>デザインデータを Git 管理するために <em>Git Large File Storage</em> を試してみた。<br />
+これで1ファイルあたり 100MB 超えても <code>push</code> できる。</p>
+
+<p>GUI を使うデザイナーはどうなるんだろう？？て部分が心配だったけど、対応してるぽかった。</p>
+
+<ul>
+<li><a href="https://github.com/blog/2079-managing-large-files-with-git-lfs">Managing large files with Git LFS</a></li>
+<li><a href="http://japan.blogs.atlassian.com/2016/02/sourcetree-update-atlassian-account-git-lfs-support-ui-refresh-and-more/">新しくなった SourceTree: アトラシアン アカウント、Git LFS サポート、新 UI など</a></li>
+</ul>
+
+<hr />
+
+<h2 id="index">Index</h2>
+
+<ul>
+<li><a href="#p1">使い方</a></li>
+<li><a href="#p2">リモートリポジトリとのやりとり</a></li>
+<li><a href="#p3">GUI のこと</a></li>
+</ul>
+
+<hr />
+
+<section id="p1">
+  <h2 id="使い方">使い方</h2>
+
+<h3 id="インストール">インストール</h3>
+
+<p>Homebrew を使っているので <code>brew install</code> する。<br />
+<a href="https://git-lfs.github.com/">公式サイト</a>にインストーラもある。</p>
+
+<pre><code class="language-bash">$ brew install git-lfs
+</code></pre>
+
+<h3 id="git-lfsで管理するファイルタイプの追加">Git LFSで管理するファイルタイプの追加</h3>
+
+<p>Git LFS で管理したいファイルタイプを必要に応じて追加していく。<br />
+以下で Sketch を track するようになる。</p>
+
+<pre><code class="language-bash">$ git lfs track　&quot;*.sketch&quot;
+Tracking *.sketch
+</code></pre>
+
+<h3 id="git-lfsで管理しているファイルタイプの確認">Git LFSで管理しているファイルタイプの確認</h3>
+
+<p>追加したファイルタイプは <code>.gitattributes</code> というファイルに追加されている。<br />
+このファイルを直接編集してもよい。<br />
+追加されているファイルタイプを確認するコマンドは以下。</p>
+
+<pre><code class="language-bash">$ git lfs track
+Listing tracked paths
+  *.sketch (.gitattributes)
+  *.psd (.gitattributes)
+  *.ai (.gitattributes)
+</code></pre>
+
+<h3 id="管理下のファイルを確認">管理下のファイルを確認</h3>
+
+<p>コミットした時点からトラッキング対象になる。<br />
+コミット後に以下のコマンドで対象のファイルを確認することが出来る。</p>
+
+<pre><code class="language-bash">$ git lfs ls-files
+</code></pre>
+
+</section>
+
+<p><section id="p2">
+  <h2 id="リモートリポジトリとのやりとり">リモートリポジトリとのやりとり</h2>
+
+<p>とりあえず <code>push</code> してみると、普通にできる。</p>
+
+<pre><code class="language-bash">$ git push origin master
+Git LFS: (0 of 1 files) 85.07 B / 165.80 KB
+</code></pre>
+
+<p><code>pull</code> も普通にできる。ファイルの中身がテキストファイルのポインタになっているので、一瞬で終わる。
+ファイルの実態を <code>pull</code> するには以下を実行。</p>
+
+<pre><code class="language-bash">$ git lfs pull
+</code></pre>
+
+<p>とりあえずここまで確認できた。</p>
+
+</section></p>
+
+<section id="p3">
+  <h2 id="gui-のこと">GUI のこと</h2>
+
+<p><a href="https://desktop.github.com/">GitHub Desktop</a> で試してみた。<br />
+アプリをインストールして、設定からコマンドラインをインストールする。
+<p class="notes">きれいな mac を持ってるデザイナーに協力してもらった★</p></p>
+
+<figure>
+  <img src="http://log.chocolateboard.net/assets/images/posts/2016/11/git-lfs/01.png" alt="Git LFS" width="400">
+  
+</figure>
+
+<p>あとは普通に使えるっぽい。
+<code>pull</code> すると、Git LFS 対象ファイルにはダウンロードボタンが表示されるみたい。</p>
+
+<figure>
+  <img src="http://log.chocolateboard.net/assets/images/posts/2016/11/git-lfs/02.png" alt="Git LFS" width="418">
+  
+</figure>
+
+<p>このボタンを押すと、実態ファイルがダウンロードされる。意外とあっさり使えた。<br />
+GUI でも大丈夫ってことがわかった。（SourceTree は試してない）</p>
+
+</section>
+
+<p>とりあえずしばらく使ってみよう(๑•̀ㅂ•́)و✧</p>
+]]></description>
+    </item>
   
     <item>
       <title>zsh: oh-my-zsh の wedisagree というテーマを使うことにした</title>
@@ -22,7 +143,7 @@
 <p>zsh に Theme があるようなので、いろいろ迷った結果「wedisagree」を使うことにしました。
 git のステータスがお天気マークで表示されるのがかわいいから:D</p>
 
-<p class="notice">ちょっとだけテーマに手を加えて好みの感じにして使ってます。</p>
+<p class="notes">ちょっとだけテーマに手を加えて好みの感じにして使ってます。</p>
 
 <p>お天気マークの意味については下記記事を参考にさせてもらいました。</p>
 
@@ -110,7 +231,7 @@ git のステータスがお天気マークで表示されるのがかわいい�
 
 <p>GitHub Pages 上で、WordPress のときと同じスラッシュ終わりの URL にする方法がわからず（あるのかな？）URL 変更することに。</p>
 
-<p class="notice">Middleman 拡張すればできるかも？？わかんないけど！<a href="https://twitter.com/wakuworks">にのくん</a> ありがとう★</p>
+<p class="notes">Middleman 拡張すればできるかも？？わかんないけど！<a href="https://twitter.com/wakuworks">にのくん</a> ありがとう★</p>
 
 <p>GitHub Pages では、拡張子なしの feed は <code>application/octet-stream</code> で配信されるみたい。
 拡張子なしも試してみましたが、元の URL と同じにできないのだから、
@@ -141,7 +262,7 @@ git のステータスがお天気マークで表示されるのがかわいい�
 移行したいと思ったきっかけは <code>$ middleman deploy</code> で公開！みたいなことがしたかったから。
 なんかかっこいいし ^^ （動機不純）</p>
 
-<p class="notice"><em>Slim</em> というテンプレートエンジンの予習がしたかったという真面目な理由もあります。</p>
+<p class="notes"><em>Slim</em> というテンプレートエンジンの予習がしたかったという真面目な理由もあります。</p>
 
 <p>途中、別件に心奪われて放置してましたが、やりかけ気持ち悪いので先週末に集中して終わらせました。
 ついでにデザインをマイナーアップデートした！あんま変わってないけど。。。</p>
@@ -983,7 +1104,7 @@ fi
 <pre><code class="language-shell">$ npm install grunt-notify --save-dev
 </code></pre>
 
-<p class="notice"><code>--save-dev</code> はお好みで。</p>
+<p class="notes"><code>--save-dev</code> はお好みで。</p>
 
 </section>
 
@@ -1068,347 +1189,6 @@ module.exports = function(grunt)
 </figure>
 
 </section>
-]]></description>
-    </item>
-  
-    <item>
-      <title>Template Engine: ECT の基本的な使い方 （Grunt でコンパイル）</title>
-      <link>http://log.chocolateboard.net/template-engine-ect/</link>
-      <pubDate>Wed, 04 Sep 2013 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/template-engine-ect/</guid>
-      <description><![CDATA[
-
-<p>ECT という JavaScript テンプレートエンジンの、基本的な使い方の覚書きです。</p>
-
-<p>Grunt でコンパイルする体でまとめましたので、Grunt を使わない人は、公式サイトを元に読みかえてくださいませ。</p>
-
-<ul>
-<li><a href="http://ectjs.com/">ECT - Fastest JavaScript template engine with CoffeeScript syntax</a></li>
-</ul>
-
-<p>Grunt でコンパイルする設定については <a href="/template-engine-ect-grunt-setting/">過去に記事</a> にしましたので併せてどうぞ ^^</p>
-
-<hr />
-
-<h2 id="index">Index</h2>
-
-<ul>
-<li><a href="#p1">ファイルの準備</a></li>
-<li><a href="#p2">Gruntfile.js にオブジェクトを用意する</a></li>
-<li><a href="#p3">Output: 用意したオブジェクトを出力する</a></li>
-<li><a href="#p4">Inheritance: 継承の仕組み</a></li>
-<li><a href="#p5">Partials: 別ファイルを読み込んでみる（include）</a></li>
-<li><a href="#p6">Blocks: 便利なブロックの使い方</a></li>
-<li><a href="#p7">Conditions: 条件による出力の調整</a></li>
-<li><a href="#p8">Loops: ループ処理について</a></li>
-</ul>
-
-<p>Index の各タイトルの頭についている [ Output: ] などという単語は、ECT 公式サイトの [ <a href="http://ectjs.com/#syntax">Syntax</a> ] と対応させています。</p>
-
-<hr />
-
-<section id="p1">
-  <h2 id="ファイルの準備">ファイルの準備</h2>
-
-<p>テンプレートファイルを用意します。</p>
-
-<p>この記事で Gruntfile.js に記載する例は、全て下図の構成に沿ったものになっています。</p>
-
-<figure>
-  <img src="http://log.chocolateboard.net/assets/images/posts/2013/09/template-engine-ect/01.png" alt="Template Engine: ECT">
-  
-</figure>
-
-<p><code>/assets/template</code> 配下の構造と <code>/htdocs</code> 配下の構造が違っていますが、この限りではありません。<code>/assets/template</code> 配下にディレクトリをきったほうが管理しやすい場合もあります。</p>
-
-<p>ECT のテンプレートファイルの拡張子は <em>.ect</em> でなくても大丈夫です。拡張子が無くても動きます。</p>
-
-</section>
-
-<section id="p2">
-  <h2 id="gruntfile-js-にオブジェクトを用意する">Gruntfile.js にオブジェクトを用意する</h2>
-
-<p><em>grunt-ect</em> を使用し、下のサンプルコードのように <em>variables</em> に持たせておきたい文言や ID 名などなどを書きます。</p>
-
-<p>書いておきたいことが沢山あるときは、別ファイルにして <code>require</code> すると管理しやすい^^</p>
-
-<p>grunt-ect の導入については過去記事をご確認ください。</p>
-
-<ul>
-<li><a href="http://log.chocolateboard.net/template-engine-ect-grunt-setting/">Template Engine: ECT を Grunt でコンパイルする準備</a></li>
-</ul>
-
-<pre><code class="language-javascript">'use strict';
-
-module.exports = function(grunt)
-{
-
-  // -----------------------------------
-  //  Variables
-  // -----------------------------------
-
-  var ROOT_PATH           = '.'
-    , PROJECT_PATH        = ROOT_PATH + '/htdocs'
-    , ASSET_TEMPLATE_PATH = ROOT_PATH + '/assets/template'
-    ;
-
-  // -----------------------------------
-  //  Options
-  // -----------------------------------
-
-  grunt.config.init({
-
-    ect: {
-      top: {
-        options: {
-          root: ASSET_TEMPLATE_PATH
-        }
-      , src: 'index.ect'
-      , dest: PROJECT_PATH + '/index.html'
-      , variables: { // ★ここに書く
-          id:    'top'
-        , title: 'Document Title'
-        , links: [
-            'http://example1.example'
-          , 'http://example2.example'
-          , 'http://example3.example'
-          ]
-        }
-      }
-    , about: {
-        options: {
-          root: ASSET_TEMPLATE_PATH
-        }
-      , src: 'about.ect'
-      , dest: PROJECT_PATH + '/about/index.html'
-      , variables: { // ★ここに書く
-          id:    'about'
-        , title: 'Document Title'
-        , links: [
-            { name: 'example1', url:'http://example1.example' }
-          , { name: 'example2', url:'http://example2.example' }
-          , { name: 'example3', url:'http://example3.example' }
-          ]
-        }
-      }
-    }
-
-  });
-
-  // -----------------------------------
-  //  Plugins
-  // -----------------------------------
-
-  grunt.loadNpmTasks('grunt-ect');
-
-};
-</code></pre>
-
-</section>
-
-<section id="p3">
-  <h2 id="output-用意したオブジェクトを出力する">Output: 用意したオブジェクトを出力する</h2>
-
-<p><code>&lt;%- @key %&gt;</code> や <code>&lt;%= @key %&gt;</code> で出力します。</p>
-
-<table>
-<thead>
-<tr>
-<th align="center">Code</th>
-<th></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="center">&lt;%- @key %&gt;</td>
-<td>エスケープ処理をせずに出力する</td>
-</tr>
-
-<tr>
-<td align="center">&lt;%= @key %&gt;</td>
-<td>エスケープ処理をして出力する</td>
-</tr>
-</tbody>
-</table>
-
-<figure>
-  <img src="http://log.chocolateboard.net/assets/images/posts/2013/09/template-engine-ect/02.png" alt="Template Engine: ECT">
-  
-</figure>
-
-</section>
-
-<section id="p4">
-  <h2 id="inheritance-継承の仕組み">Inheritance: 継承の仕組み</h2>
-
-<p>テンプレートを継承することができます。</p>
-
-<p>例えば、全体の構造にあたる部分を親テンプレートとし、その中の一部のブロック部分のみを子テンプレートで上書きするといったことができます。</p>
-
-<table>
-<thead>
-<tr>
-<th align="center">Code</th>
-<th></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="center">&lt;% content %&gt;</td>
-<td>親テンプレート側に書く。子テンプレートで上書きするプレースホルダになる。</td>
-</tr>
-
-<tr>
-<td align="center">&lt;% extend &lsquo;example.ect&rsquo; %&gt;</td>
-<td>子テンプレート側から extend で継承する親テンプレートのファイル名を指定する。</td>
-</tr>
-</tbody>
-</table>
-
-<p>下図は、layout.ect を親テンプレート、index.ect を子テンプレートとして継承した例です。</p>
-
-<p>親テンプレートに <code>&lt;% content %&gt;</code> と書いていた部分が、子テンプレートで上書きされ、それ以外は継承されます。</p>
-
-<figure>
-  <img src="http://log.chocolateboard.net/assets/images/posts/2013/09/template-engine-ect/03.png" alt="Template Engine: ECT">
-  
-</figure>
-
-</section>
-
-<section id="p5">
-  <h2 id="partials-別ファイルを読み込んでみる-include">Partials: 別ファイルを読み込んでみる（include）</h2>
-
-<p>別ファイルを読み込む時は、<code>include</code> を使います。</p>
-
-<table>
-<thead>
-<tr>
-<th align="center">Code</th>
-<th></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="center">&lt;% include &lsquo;example.ect&rsquo; %&gt;</td>
-<td>インクルードしたいファイル名を指定する</td>
-</tr>
-</tbody>
-</table>
-
-<p><code>include</code> するときに、オブジェクトを渡すことも出来ます。</p>
-
-<figure>
-  <img src="http://log.chocolateboard.net/assets/images/posts/2013/09/template-engine-ect/04.png" alt="Template Engine: ECT">
-  
-</figure>
-
-</section>
-
-<section id="p6">
-  <h2 id="blocks-便利なブロックの使い方">Blocks: 便利なブロックの使い方</h2>
-
-<p>継承で使用した <code>&lt;% content %&gt;</code> の他に、任意の名前をつけた複数のプレースホルダを利用することができます。</p>
-
-<table>
-<thead>
-<tr>
-<th align="center">Code</th>
-<th></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="center">&lt;% content &lsquo;example&rsquo; %&gt;</td>
-<td>親テンプレート側に書く。プレースホルダに任意の名前を指定する。</td>
-</tr>
-
-<tr>
-<td align="center">&lt;% block &lsquo;example&rsquo; : %&gt;[wbr]&lt;% end %&gt;</td>
-<td>子テンプレート側に書く。親テンプレートのプレースホルダ名を指定する。</td>
-</tr>
-</tbody>
-</table>
-
-<figure>
-  <img src="http://log.chocolateboard.net/assets/images/posts/2013/09/template-engine-ect/05.png" alt="Template Engine: ECT">
-  
-</figure>
-
-</section>
-
-<section id="p7">
-  <h2 id="conditions-条件による出力の調整">Conditions: 条件による出力の調整</h2>
-
-<p>CoffeeScript のシンタックスで書けば、たぶん大体動きます。</p>
-
-<ul>
-<li><a href="http://coffeescript.org/">CoffeeScript</a></li>
-</ul>
-
-<table>
-<thead>
-<tr>
-<th align="center">Code</th>
-<th></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="center">&lt;% 条件文: %&gt;[wbr]&lt;% else: %&gt;[wbr]&lt;% end %&gt;</td>
-<td>条件文や else の後の <code>:</code> を忘れないこと。そして最後の <code>&lt;% end %&gt;</code> を忘れないこと！</td>
-</tr>
-</tbody>
-</table>
-
-<figure>
-  <img src="http://log.chocolateboard.net/assets/images/posts/2013/09/template-engine-ect/06.png" alt="Template Engine: ECT">
-  
-</figure>
-
-</section>
-
-<section id="p8">
-  <h2 id="loops-ループ処理について">Loops: ループ処理について</h2>
-
-<p>これも条件分岐と一緒で、CoffeeScript のシンタックスで書けば動くやつです。</p>
-
-<p><a href="#p2">Gruntfile.js にオブジェクトを用意する</a> で用意したオブジェクトに従えば、下記のような感じで出力できます。</p>
-
-<h3 id="index-ect-で-url-をリストとして出力する">index.ect で URL をリストとして出力する</h3>
-
-<pre><code class="language-erb">&lt;% for link in @links : %&gt;
-  &lt;li&gt;&lt;%- link %&gt;&lt;/li&gt;
-&lt;% end %&gt;
-</code></pre>
-
-<h3 id="about-ect-で-リンク付きリストとして出力する">about.ect で リンク付きリストとして出力する</h3>
-
-<pre><code class="language-erb">&lt;% for link in @links : %&gt;
-  &lt;li&gt;&lt;a href=&quot;&lt;%- link.url %&gt;&quot;&gt;&lt;%- link.name %&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;% end %&gt;
-</code></pre>
-
-<figure>
-  <img src="http://log.chocolateboard.net/assets/images/posts/2013/09/template-engine-ect/07.png" alt="Template Engine: ECT">
-  
-</figure>
-
-</section>
-
-<hr />
-
-<p>他に、オリジナルの関数を用意したりできます。オリジナルの関数や、OPG の設定、各ページのタイトルなど、それぞれを管理しやすいように別ファイルに纏めて書くことが多いです。</p>
-
-<p>最近は、Gruntfile 含め、CoffeeScript にしています。テンプレート用のオブジェクトが沢山ある時に、波括弧とかカンマとかない方が見やすいなあと思ってそうしています。</p>
-
-<p>オブジェクトを別ファイルにする件も、<code>require</code> するお話と一緒にまとめようと思います。（そのうち）</p>
 ]]></description>
     </item>
   
