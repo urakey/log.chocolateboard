@@ -4,6 +4,7 @@ HasCJKLanguage   = true
 Title            = 'log.chocolateboard'
 Publishdir       = 'docs'
 Paginate         = 12
+PygmentsUseClasses = true
 
 [Author]
 name = 'Aki Fukayama'

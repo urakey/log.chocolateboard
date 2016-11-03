@@ -142,5 +142,5 @@ gulp.task('watch', function() {
     PATHS.src + '/styles/**/*',
     PATHS.src + '/scripts/**/*',
   ];
-  gulp.watch(targets, ['build']);
+  gulp.watch(targets, ['sass', 'browserify']);
 });
