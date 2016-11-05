@@ -3,7 +3,7 @@ date:       2014-11-14
 title:      'JavaScript: Instagram API を使って自分の写真を取得・表示する jQuery プラグイン'
 categories: ['Coding']
 tags:       ['Instagram', 'JavaScript', 'jQuery', 'Plugins']
-url:        '/jquery-akflickr/'
+url:        '/jquery-akinstagram/'
 eyecatch:   '/assets/images/posts/2014/11/jquery-akinstagram/eyecatch.png'
 eyecatchCap:     'Instagram'
 eyecatchCapLink: 'https://instagram.com/'

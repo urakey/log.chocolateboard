@@ -697,10 +697,10 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
   
     <item>
       <title>JavaScript: Instagram API を使って自分の写真を取得・表示する jQuery プラグイン</title>
-      <link>http://log.chocolateboard.net/jquery-akflickr/</link>
+      <link>http://log.chocolateboard.net/jquery-akinstagram/</link>
       <pubDate>Fri, 14 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/jquery-akflickr/</guid>
+      <guid>http://log.chocolateboard.net/jquery-akinstagram/</guid>
       <description><![CDATA[
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その3です（目標達成まであと7つ）。</p>
