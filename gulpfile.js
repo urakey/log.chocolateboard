@@ -75,8 +75,8 @@ gulp.task('minify:js', function() {
 // HTML
 gulp.task('minify:html', function() {
  return gulp.src(PATHS.publishdir + '/**/*.html')
- .pipe($.minifyHtml({ empty: true }))
- .pipe(gulp.dest(PATHS.publishdir));
+   .pipe($.htmlmin({ collapseWhitespace: true }))
+   .pipe(gulp.dest(PATHS.publishdir));
 });
 
 gulp.task('replace:html', function () {
