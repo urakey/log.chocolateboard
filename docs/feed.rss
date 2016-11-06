@@ -8,7 +8,26 @@
   <description>ここは、Web 制作についてのメモ置き場です。読んでくれる誰かのことを想って書いています。</description>
   <generator uri="https://gohugo.io">Hugo</generator>
   <creativeCommons:license>http://creativecommons.org/licenses/by-nc/4.0/</creativeCommons:license>
-  <lastBuildDate>Thu, 03 Nov 2016 00:00:00 UTC</lastBuildDate>
+  <lastBuildDate>Sun, 06 Nov 2016 00:00:00 UTC</lastBuildDate>
+  
+    <item>
+      <title>three.js をさわってみた</title>
+      <link>http://log.chocolateboard.net/three-js-particles/</link>
+      <pubDate>Sun, 06 Nov 2016 00:00:00 UTC</pubDate>
+      <author>Aki Fukayama</author>
+      <guid>http://log.chocolateboard.net/three-js-particles/</guid>
+      <description><![CDATA[<p><a href="https://threejs.org/">three.js</a> をさわってみた。<br />
+ドキュメントを読みながらパーティクルをつくった。
+3D のことも WebGL のこともちゃんと理解できてないのでちゃんと勉強したい。</p>
+
+<hr />
+
+<cite>
+</cite>
+<p data-height="400" data-theme-id="7235" data-slug-hash="JboPwZ" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="http://codepen.io/akey">@akey</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+]]></description>
+    </item>
   
     <item>
       <title>git: Git LFS を使ってみた</title>
@@ -1067,128 +1086,6 @@ fi
 <hr />
 
 <p>次は、Tab 補完の設定をしてみよう。</p>
-]]></description>
-    </item>
-  
-    <item>
-      <title>Grunt: タスクの失敗や完了を通知する</title>
-      <link>http://log.chocolateboard.net/grunt-notify/</link>
-      <pubDate>Sun, 12 Jan 2014 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/grunt-notify/</guid>
-      <description><![CDATA[
-
-<p><code>grunt watch</code> しているときに、タスクの失敗や完了を通知するようにしたときのメモ。</p>
-
-<hr />
-
-<h2 id="index">Index</h2>
-
-<ul>
-<li><a href="#p1">grunt-notify をインストールする</a></li>
-<li><a href="#p2">Gruntfile loadNpmTasks でタスクを追加する</a></li>
-<li><a href="#p3">タスクの『完了』も通知する</a></li>
-</ul>
-
-<hr />
-
-<section id="p1">
-  <h2 id="grunt-notify-をインストールする">grunt-notify をインストールする</h2>
-
-<ul>
-<li><a href="https://github.com/dylang/grunt-notify">dylang/grunt-notify</a></li>
-</ul>
-
-<p>ターミナルで下記を実行して <em>grunt-notify</em> をインストールします。</p>
-
-<pre><code class="language-shell">$ npm install grunt-notify --save-dev
-</code></pre>
-
-<p class="notes"><code>--save-dev</code> はお好みで。</p>
-
-</section>
-
-<section id="p2">
-  <h2 id="gruntfile-loadnpmtasks-でタスクを追加する">Gruntfile loadNpmTasks でタスクを追加する</h2>
-
-<p>Gruntfile にタスクを追加します。これだけでタスクの『失敗』を通知してくれます。</p>
-
-<pre><code class="language-javascript">grunt.loadNpmTasks('grunt-notify');
-</code></pre>
-
-</section>
-
-<section id="p3">
-  <h2 id="タスクの-完了-も通知する">タスクの『完了』も通知する</h2>
-
-<p>Gruntfile に option で追加すると完了メッセージも出してくれます。</p>
-
-<pre><code class="language-javascript">'use strict';
-
-module.exports = function(grunt)
-{
-
-  // -----------------------------------
-  //  Variables
-  // -----------------------------------
-
-  var ROOT_PATH           = '.'
-    , PROJECT_PATH        = ROOT_PATH + '/htdocs'
-    , ASSET_TEMPLATE_PATH = ROOT_PATH + '/assets/template'
-    ;
-
-  // -----------------------------------
-  //  Options
-  // -----------------------------------
-
-  grunt.config.init({
-
-    ect: {
-      ... 省略
-    }
-  , notify: {
-      ect: {
-        options: {
-          title:   'template:ect'
-        , message: 'v(￣д￣)v ｲｴｲ'
-        }
-      }
-    }
-  , watch: {
-      templates: {
-        files: [
-         ASSET_TEMPLATE_PATH + '/*.ect'
-        ]
-    , tasks: [
-          'ect'
-        , 'notify:ect'
-        ]
-      }
-    }
-
-  });
-
-  // -----------------------------------
-  //  Plugins
-  // -----------------------------------
-
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-ect');
-  grunt.loadNpmTasks('grunt-notify');
-
-  grunt.registerTask('default', ['watch']);
-
-};
-</code></pre>
-
-<p>↓こんな感じの完了メッセージが出ます。</p>
-
-<figure>
-  <img src="http://log.chocolateboard.net/assets/images/posts/2014/01/grunt-notify/01.png" alt="Grunt notify">
-  
-</figure>
-
-</section>
 ]]></description>
     </item>
   
