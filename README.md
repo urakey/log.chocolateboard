@@ -3,8 +3,6 @@ log.chocolateboard
 
 ## Configuration
 
-## Configuration
-
 ```
 $ npm install
 ```
