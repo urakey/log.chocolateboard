@@ -18,7 +18,7 @@ twitter     = 'https://twitter.com/urakey'
 facebook    = 'https://www.facebook.com/urakey'
 pinterest   = 'http://pinterest.com/urakey'
 github      = 'https://github.com/urakey'
-archives    = ['2011', '2012', '2013', '2014', '2015', '2016']
+archives    = ['2016', '2015', '2014', '2013', '2012', '2011']
 
 [Taxonomies]
 tags       = 'tags'
