@@ -49,15 +49,15 @@ JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強�
 
 上記 URL にアクセス後、[ Register Your Application ] ボタンをクリックします。Developer 登録をしていない人はこの後 [ Developer Signup ] 画面に移動しますので、そこで開発者登録をします。
 
-![JavaScript: Instagram](/assets/images/posts/2014/11/jquery-akinstagram/01.png)
+{{< figure src="/assets/images/posts/2014/11/jquery-akinstagram/01.png" alt="JavaScript: Instagram" >}}
 
 #### 2. アプリケーションの登録
 
-![JavaScript: Instagram](/assets/images/posts/2014/11/jquery-akinstagram/02.png)
+{{< figure src="/assets/images/posts/2014/11/jquery-akinstagram/02.png" alt="JavaScript: Instagram" >}}
 
 [ Register a New Client（新しいアプリを登録） ] ボタンをクリックし、アプリケーション登録をしていきます。ウェブ上で利用する場合は、自分のサイト情報を入力していけば良いと思います。
 
-![JavaScript: Instagram](/assets/images/posts/2014/11/jquery-akinstagram/03.png)
+{{< figure src="/assets/images/posts/2014/11/jquery-akinstagram/03.png" alt="JavaScript: Instagram" >}}
 
 - Applictaiton Name - アプリケーションの名前（適当で OK）
 - Dscription - 説明など
