@@ -17,7 +17,7 @@ Sketch はドキュメントの自動的と保存と履歴の保存してくれ�
 
 Sketch &gt; Preferences &gt; General で設定。
 
-![Sketch setting](/assets/images/posts/2016/02/sketch-auto-save/01.png)
+{{< figure src="/assets/images/posts/2016/02/sketch-auto-save/01.png" alt="Sketch setting" >}}
 
 変更履歴は Git で管理することにしています。
 

@@ -208,7 +208,11 @@ git のステータスがお天気マークで表示されるのがかわいい�
 
 <p>Sketch &gt; Preferences &gt; General で設定。</p>
 
-<p><img src="http://log.chocolateboard.net/assets/images/posts/2016/02/sketch-auto-save/01.png" alt="Sketch setting" /></p>
+<figure>
+  <img src="http://log.chocolateboard.net/assets/images/posts/2016/02/sketch-auto-save/01.png" alt="Sketch setting">
+  
+</figure>
+
 
 <p>変更履歴は Git で管理することにしています。</p>
 
