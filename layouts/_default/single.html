@@ -32,11 +32,78 @@
     {{ end }}
     <div class="article__body" itemprop="articleBody">
       {{ .Content }}
-      <hr>
+    </div>
+    <div class="article__section">
+      <h2 class="article__sectionTitle">Share</h2>
+      <ul class="article__sectionShare">
+        <li class="twitter">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="urakey">Tweet</a>
+        </li>
+        <li class="facebook">
+          <div class="fb-like" data-href="#{site_url}#{current_article.url}" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        </li>
+        <li class="pocket">
+          <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en">Pocket</a>
+        </li>
+        <li class="hatena">
+          <a href="#{site_url}#{current_article.url}" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加">
+            <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;">
+          </a>
+        </li>
+      </ul>
     </div>
   </article>
+  <!-- <section class="article__section">
+    <h2 class="article__sectionTitle">Similar posts</h2>
+    <ul class="article__sectionList">
+      {{ $page_link := .Permalink }}
+      {{ $tags := .Params.tags }}
+      {{ range .Site.Pages }}
+        {{ $page := . }}{{ . }}
+        {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+        {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+          <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </section> -->
+  <section class="article__section">
+    <h2 class="article__sectionTitle">Comments</h2>
+    <div id="disqus_thread"></div>
+  </section>
 </main>
 
 {{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}
+
+{{ "<!-- Facebook JavaScript SDK -->" | safeHTML }}
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=264941413542272&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+{{ "<!-- Pocket JavaScript -->" | safeHTML }}
+<script>
+!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
+</script>
+{{ "<!-- Hatena JavaScript -->" | safeHTML }}
+<script src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async></script>
+{{ "<!-- DISQUS JavaScript -->" | safeHTML }}
+<script>
+var disqus_shortname = 'chocolateboard';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+
 {{ partial "tail.html" . }}
