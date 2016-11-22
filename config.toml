@@ -3,7 +3,7 @@ LegalanguageCode = 'ja-JP'
 HasCJKLanguage   = true
 Title            = 'log.chocolateboard'
 Publishdir       = 'docs'
-Paginate         = 12
+Paginate         = 20
 PygmentsUseClasses = true
 
 [Author]

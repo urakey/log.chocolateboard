@@ -178,6 +178,6 @@ grunt.initConfig({
 
 よく使っている設定をまとめた config.rb を Gist にアップしましたので置いておきます。
 
-[gist:5545566]
+{{< gist id="5545566" >}}
 
 {{% /section %}}

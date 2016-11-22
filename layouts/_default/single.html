@@ -19,7 +19,10 @@
         <li class="article__footerTags">
           <span>Tags</span>
           {{ with .Params.tags }}
-            {{ range . }}<a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" rel="tag">{{ . }}</a>{{ end }}
+            {{ range $index, $tag := . }}
+              {{ if ne $index 0 }}, {{ end }}
+              <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}/" rel="tag">{{ $tag }}</a>
+            {{ end }}
           {{ end }}
         </li>
       </ul>
