@@ -315,8 +315,6 @@
   content: "\f02c";
 }
 
-
-
 .article__sectionTitle {
   @extend %title;
 
@@ -330,10 +328,32 @@
 .article__sectionShare {
   @extend %resetlist;
   @extend %radius;
-  @include media-queries(medium) {
-    font-size: 0;
-    li {
-      display: inline-block;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: $border 1px solid;
+
+  li {
+    width: 25%;
+    height: 85px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+      background: $background;
+    }
+    &:nth-child(even) {
+      background: white;
+    }
+
+    @include media-queries(medium) {
       width: 50%;
       &:nth-child(1),
       &:nth-child(4) {
@@ -343,27 +363,6 @@
       &:nth-child(3) {
         background: white;
       }
-    }
-  }
-
-  display: table;
-  width: 100%;
-  text-align: center;
-  border: $border 1px solid;
-  box-sizing: border-box;
-
-  li {
-    display: table-cell;
-    min-width: 80px;
-    padding: 10px;
-    line-height: 1;
-    vertical-align: top;
-    box-sizing: border-box;
-    &:nth-child(odd) {
-      background: $background;
-    }
-    &:nth-child(even) {
-      background: white;
     }
   }
 }

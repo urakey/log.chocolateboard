@@ -79,6 +79,9 @@
   }
 
   li {
+    @include media-queries(small) {
+      margin: 0 .5em;
+    }
     display: inline-block;
     margin: 0 1em;
   }
