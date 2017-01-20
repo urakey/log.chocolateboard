@@ -6,7 +6,6 @@
   {{ with .Site.Author.name }}<author>{{ . }}</author>{{ end }}
   <description>{{ .Site.Params.description }}</description>
   <generator uri="https://gohugo.io">Hugo</generator>
-  <creativeCommons:license>http://creativecommons.org/licenses/by-nc/4.0/</creativeCommons:license>
   <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</lastBuildDate>
   {{ range first 15 .Data.Pages }}
     <item>

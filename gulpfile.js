@@ -131,7 +131,7 @@ gulp.task('format:rss', function() {
 })
 
 gulp.task('clean', function() {
-  del([PATHS.publishdir + '/**/index.xml']);
+  del([PATHS.publishdir + '/**/index.xml', '!' + PATHS.publishdir + '/index.xml']);
 });
 
 // -----------------------------------------------------------------------------
