@@ -2,12 +2,121 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <title>log.chocolateboard</title>
-  <link>http://log.chocolateboard.net/</link>
+  <link>http://log.chocolateboard.net/index.xml</link>
   
   <author>Aki Fukayama</author>
   <description>ここは、Web 制作についてのメモ置き場です。読んでくれる誰かのことを想って書いています。</description>
   <generator uri="https://gohugo.io">Hugo</generator>
-  <lastBuildDate>Sun, 06 Nov 2016 00:00:00 UTC</lastBuildDate>
+  <lastBuildDate>Sat, 21 Jan 2017 00:00:00 UTC</lastBuildDate>
+  
+    <item>
+      <title>Middleman から Hugo に移行しました</title>
+      <link>http://log.chocolateboard.net/hugo-2017/</link>
+      <pubDate>Sat, 21 Jan 2017 00:00:00 UTC</pubDate>
+      <author>Aki Fukayama</author>
+      <guid>http://log.chocolateboard.net/hugo-2017/</guid>
+      <description><![CDATA[
+
+<p>去年の8月に Go の会社に転職したので、Middleman から Hugo に乗り換える決意をした。</p>
+
+<p>おすすめの記事はこちら★<br />
+<a href="http://mercan.mercari.com/entry/2016/11/04/111332">Go経験者０人スタート！メルカリ アッテ サーバサイドエンジニア事情</a></p>
+
+<p>乗り換えたのは去年の10月くらいだったのだけど、乗り換え記録を書いていなかったので、年明けた今書くことに^^</p>
+
+<p>ちなみにこの移行をきっかけに <code>gulp build</code> てしてたのを <code>npm run build</code> ってする感じにしたのは、個人的な進歩★</p>
+
+<hr />
+
+<h2 id="index">Index</h2>
+
+<ul>
+<li><a href="#p1">移行手順メモ</a></li>
+<li><a href="#p2">GitHub Pages でホスティング</a></li>
+<li><a href="#p3">感想</a></li>
+<li><a href="#p4">積み残しタスク</a></li>
+</ul>
+
+<hr />
+
+<section id="p1">
+  <h2 id="移行手順メモ">移行手順メモ</h2>
+
+<ol>
+<li>Hugo をインストールして<a href="https://gohugo.io/overview/introduction/">ドキュメント</a>を読んだ</li>
+<li>Slim でコーディングしてたテンプレートを書き直して Hugo のお作法に則って分解</li>
+<li>Middleman 環境でビルドしてた静的ファイル系を <code>gulp</code> でビルドするように変更</li>
+<li>Middleman のアセットパイプラインに依存してたものを <code>npm</code> に集約</li>
+<li>CustomRenderer で書き換えてた HTML を <code>gulp replace</code> と Hugo の <code>shortcodes</code> に置き換え</li>
+<li>作った shortcodes に合わせてマークダウンファイルを一部書き換え（grep 置換した）</li>
+<li>Syntax highlighting を <code>highlight.pack.js</code> で対応</li>
+<li>GitHub Pages でホスティング（<code>docs</code> ディレクトリ使ってみることにした）</li>
+<li>かゆいところをなおす作業（一番辛かった）</li>
+<li>完成！！やったー</li>
+</ol>
+
+</section>
+
+<p><section id="p2">
+  <h2 id="github-pages-でホスティング">GitHub Pages でホスティング</h2>
+
+<p>以前は、プロジェクトに対して、 <code>gh-pages</code> ブランチのコンテンツが使われるというやつでホスティングしていましたが、<code>master</code> 配下の <code>docs</code> ディレクトリがホスティングされるやつに変えました。</p>
+
+<p><code>log.chocolateboard.net</code> と書いた <em>CNAME</em> ファイルが <code>docs</code> ディレクトリに含まれるようにして、<code>master branch /docs folder</code> を選択。</p>
+
+<figure>
+  <img src="http://log.chocolateboard.net/assets/images/posts/2017/01/hugo-2017/01.png" alt="Hugo: GitHub Pages">
+  
+</figure>
+
+<p>DNS の設定は以前いじってあったので、すぐ反映されました ^^</p>
+
+<p class="notes"><p>CIツール使って <code>gh-pages</code> ブランチにデプロイするようにしようか迷ったけど、めんどくさくなってやめました。</p>
+</p>
+
+<section id="p3">
+  <h2 id="感想">感想</h2>
+
+<p>Middleman 環境でビルドするようにしてたものを全部 <code>gulp</code> ビルドに移行するのが、ものすごくだるかった。
+<code>{{ . }}</code> ← こういうドットの書き方慣れなくて、書いてる途中でゲシュタルト崩壊して息切れした。これ見づらくないのかな？</p>
+
+<p>何より Slim と別れるのがすごく辛かった(´；ω；｀) またお付き合いしたい。</p>
+
+<p>いろいろ面倒で、途中でやめたくなったけど、移行完了した結果&hellip;ビルド速すぎて感動した！！！！！すごい速いのでもうすべての辛さが消えました。</p>
+
+<p>今回 <code>gulp</code> と <code>hugo</code> を1回でビルドしたいので、コマンドを <code>npm</code> にまとめたのが自分の中で一番のハイライト。<br />
+<code>gulp</code> と <code>hugo</code> の <code>watch</code> タスク混ぜたやつがうまくいってないので、強そうな人に相談しないと。。</p>
+
+<p>とにかく速いので、ほんとにおすすめです★気になる方は是非♫</p>
+
+<ul>
+<li><a href="https://github.com/urakey/log.chocolateboard">urakey/log.chocolateboard</a></li>
+</ul>
+
+<h3 id="参考にさせていただいた記事-thx-xd">参考にさせていただいた記事 thx XD</h3>
+
+<ul>
+<li><a href="http://re-dzine.net/2015/01/hugo/">MiddlemanからHugoへ移行した</a></li>
+<li><a href="http://deeeet.com/writing/2014/12/25/hugo/">OctopressからHugoへ移行したと</a></li>
+<li><a href="https://t32k.me/mol/log/hugo/">JekyllからHugoへ</a></li>
+<li><a href="https://blog.mismithportfolio.com/web/20160207hugomyblog">【Hugo】ゴリラでも分かる静的サイトジェネレーターHugoでオリジナルテーマ作り</a></li>
+</ul>
+
+</section>
+
+<section id="p4">
+  <h2 id="積み残しタスク">積み残しタスク</h2>
+
+<ul>
+<li>画像軽量化タスクが重いので、元画像をとっておくのをやめよう</li>
+<li><code>watch</code> タスクどうにかする</li>
+</ul>
+
+</section>
+
+</section></p>
+]]></description>
+    </item>
   
     <item>
       <title>three.js をさわってみた</title>
@@ -1045,59 +1154,6 @@ fi
 <p>できたー(´∀｀*)</p>
 
 </section>
-]]></description>
-    </item>
-  
-    <item>
-      <title>Git: .gitconfig に alias とかを設定してみた</title>
-      <link>http://log.chocolateboard.net/git-gitconfig-alias/</link>
-      <pubDate>Mon, 13 Jan 2014 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/git-gitconfig-alias/</guid>
-      <description><![CDATA[<p>ずっと <a href="http://www.sourcetreeapp.com/">SourceTree</a> で git してましたが、転職をキッカケに黒い画面で git 始めました(๑′ᴗ&rsquo;๑)</p>
-
-<p>慣れてきたので、お家 mac でも黒い画面で git しよう！と思い、とりあえず alias 設定をしたメモ。</p>
-
-<hr />
-
-<section id="p1">
-  <h2 id="gitconfig-に書いたこと">.gitconfig に書いたこと</h2>
-
-<pre><code>[color]
-  # 以下のコマンドは自動で色をつける
-  status = auto
-  diff = auto
-  branch = auto
-  interactive = auto
-  grep = auto
-[push]
-  # tracking しているリポジトリが default の push 先
-  default = tracking
-[core]
-  # global な .gitignore
-  excludesfile = /Users/hoge/.gitignore
-[alias]
-  st = status
-  sh = show
-  ft = fetch
-  ci = commit
-  co = checkout
-  b = branch
-  d = diff
-  dc = diff --cached
-  w = whatchanged
-  graph = log --graph --date-order -C -M --pretty=format:\&quot;&lt;%h&gt; %ad [%an] %Cgreen%d%Creset %s\&quot; --all --date=short
-  g = log --graph --date-order -C -M --pretty=format:\&quot;&lt;%h&gt; %ad [%an] %Cgreen%d%Creset %s\&quot; --all --date=short
-  url = config --get remote.origin.url
-</code></pre>
-
-<p><code>git g</code> のお陰で SourceTree なくても大丈夫になった！</p>
-
-</section>
-
-<hr />
-
-<p>次は、Tab 補完の設定をしてみよう。</p>
 ]]></description>
     </item>
   
