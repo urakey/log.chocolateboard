@@ -81,6 +81,7 @@ gulp.task('minify:html', function() {
 
 gulp.task('replace:html', function () {
   return gulp.src([PATHS.publishdir + '/**/*.html'])
+    .pipe($.replace('[wbr]', '<wbr>'))
     .pipe($.replace('<p></p>', ''))
     .pipe($.replace('<p><section', '<section'))
     .pipe($.replace('</section></p>', '</section>'))
