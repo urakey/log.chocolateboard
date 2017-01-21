@@ -30,7 +30,11 @@
     {{ if .Params.eyecatch }}
       <figure class="article__eyecatch">
         <img src="{{ .Params.eyecatch }}" alt="" itemprop="image">
+        {{ if .Params.eyecatchCap }}<figcaption>{{ end }}
+        {{ with .Params.eyecatchCapLink }}<a href="{{ . }}">{{ end }}
         {{ with .Params.eyecatchCap }}{{ . }}{{ end }}
+        {{ if .Params.eyecatchCapLink }}</a>{{ end }}
+        {{ if .Params.eyecatchCap }}</figcaption>{{ end }}
       </figure>
     {{ end }}
     <div class="article__body" itemprop="articleBody">

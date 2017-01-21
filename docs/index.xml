@@ -71,8 +71,9 @@
 
 <p>DNS の設定は以前いじってあったので、すぐ反映されました ^^</p>
 
-<p class="notes"><p>CIツール使って <code>gh-pages</code> ブランチにデプロイするようにしようか迷ったけど、めんどくさくなってやめました。</p>
-</p>
+<p class="notes">CIツール使って <code>gh-pages</code> ブランチにデプロイするようにしようか迷ったけど、めんどくさくなってやめました。</p>
+
+</section></p>
 
 <section id="p3">
   <h2 id="感想">感想</h2>
@@ -104,15 +105,13 @@
 
 </section>
 
-<section id="p4">
+<p><section id="p4">
   <h2 id="積み残しタスク">積み残しタスク</h2>
 
 <ul>
 <li>画像軽量化タスクが重いので、元画像をとっておくのをやめよう</li>
 <li><code>watch</code> タスクどうにかする</li>
 </ul>
-
-</section>
 
 </section></p>
 ]]></description>
