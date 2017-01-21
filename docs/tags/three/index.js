@@ -314,7 +314,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <p class="footer__license">
     <small>
       Except where otherwise noted,<br>
-      content on this site is licensed under a Creative Commons<a href="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-Noncommercial 4.0 License</a>.
+      content on this site is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-Noncommercial 4.0 License</a>.
     </small>
   </p>
   <div class="footer__social">
