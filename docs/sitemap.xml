@@ -2,416 +2,417 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://log.chocolateboard.net/hugo-2017/</loc>
+    <loc>https://log.chocolateboard.net/hugo-2017/</loc>
     <lastmod>2017-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/three-js-particles/</loc>
+    <loc>https://log.chocolateboard.net/three-js-particles/</loc>
     <lastmod>2016-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/git-lfs/</loc>
+    <loc>https://log.chocolateboard.net/git-lfs/</loc>
     <lastmod>2016-11-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/oh-my-zsh-wedisagree/</loc>
+    <loc>https://log.chocolateboard.net/oh-my-zsh-wedisagree/</loc>
     <lastmod>2016-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/itermcolors/</loc>
+    <loc>https://log.chocolateboard.net/itermcolors/</loc>
     <lastmod>2016-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sketch-auto-save/</loc>
+    <loc>https://log.chocolateboard.net/sketch-auto-save/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sh-bindkey/</loc>
+    <loc>https://log.chocolateboard.net/sh-bindkey/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/middleman-feed-url/</loc>
+    <loc>https://log.chocolateboard.net/middleman-feed-url/</loc>
     <lastmod>2015-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/middleman-blog-2015/</loc>
+    <loc>https://log.chocolateboard.net/middleman-blog-2015/</loc>
     <lastmod>2015-03-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/xcode-alcatraz/</loc>
+    <loc>https://log.chocolateboard.net/xcode-alcatraz/</loc>
     <lastmod>2015-02-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/jquery-akflickr/</loc>
+    <loc>https://log.chocolateboard.net/jquery-akflickr/</loc>
     <lastmod>2014-11-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/jquery-akinstagram/</loc>
+    <loc>https://log.chocolateboard.net/jquery-akinstagram/</loc>
     <lastmod>2014-11-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/jquery-akbooklog/</loc>
+    <loc>https://log.chocolateboard.net/jquery-akbooklog/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/jquery-aktextoverlay/</loc>
+    <loc>https://log.chocolateboard.net/jquery-aktextoverlay/</loc>
     <lastmod>2014-11-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/homebrew-bash-completion/</loc>
+    <loc>https://log.chocolateboard.net/homebrew-bash-completion/</loc>
     <lastmod>2014-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/git-gitconfig-alias/</loc>
+    <loc>https://log.chocolateboard.net/git-gitconfig-alias/</loc>
     <lastmod>2014-01-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/grunt-notify/</loc>
+    <loc>https://log.chocolateboard.net/grunt-notify/</loc>
     <lastmod>2014-01-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/template-engine-ect/</loc>
+    <loc>https://log.chocolateboard.net/template-engine-ect/</loc>
     <lastmod>2013-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sublime-text-grep/</loc>
+    <loc>https://log.chocolateboard.net/sublime-text-grep/</loc>
     <lastmod>2013-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sublime-text-flatland-theme/</loc>
+    <loc>https://log.chocolateboard.net/sublime-text-flatland-theme/</loc>
     <lastmod>2013-07-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/template-engine-ect-grunt-setting/</loc>
+    <loc>https://log.chocolateboard.net/template-engine-ect-grunt-setting/</loc>
     <lastmod>2013-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sublime-text-marked/</loc>
+    <loc>https://log.chocolateboard.net/sublime-text-marked/</loc>
     <lastmod>2013-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/subdomain/</loc>
+    <loc>https://log.chocolateboard.net/subdomain/</loc>
     <lastmod>2013-06-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/grunt-compass-environment/</loc>
+    <loc>https://log.chocolateboard.net/grunt-compass-environment/</loc>
     <lastmod>2013-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sublime-text-syntax-highlighting/</loc>
+    <loc>https://log.chocolateboard.net/sublime-text-syntax-highlighting/</loc>
     <lastmod>2013-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sublime-text-inputsequence/</loc>
+    <loc>https://log.chocolateboard.net/sublime-text-inputsequence/</loc>
     <lastmod>2013-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sublime-text-gitgutter/</loc>
+    <loc>https://log.chocolateboard.net/sublime-text-gitgutter/</loc>
     <lastmod>2013-04-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/sublime-text-setting/</loc>
+    <loc>https://log.chocolateboard.net/sublime-text-setting/</loc>
     <lastmod>2013-04-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/new-blog-2013/</loc>
+    <loc>https://log.chocolateboard.net/new-blog-2013/</loc>
     <lastmod>2013-03-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/2013/</loc>
+    <loc>https://log.chocolateboard.net/2013/</loc>
     <lastmod>2013-09-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/2014/</loc>
+    <loc>https://log.chocolateboard.net/2014/</loc>
     <lastmod>2014-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/2015/</loc>
+    <loc>https://log.chocolateboard.net/2015/</loc>
     <lastmod>2015-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/2016/</loc>
+    <loc>https://log.chocolateboard.net/2016/</loc>
     <lastmod>2016-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/2017/</loc>
+    <loc>https://log.chocolateboard.net/2017/</loc>
     <lastmod>2017-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/about/</loc>
+    <loc>https://log.chocolateboard.net/about/</loc>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/bash/</loc>
+    <loc>https://log.chocolateboard.net/tags/bash/</loc>
     <lastmod>2014-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/booklog/</loc>
+    <loc>https://log.chocolateboard.net/tags/booklog/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/categories/</loc>
+    <loc>https://log.chocolateboard.net/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/categories/coding/</loc>
+    <loc>https://log.chocolateboard.net/categories/coding/</loc>
     <lastmod>2017-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/coffeescript/</loc>
+    <loc>https://log.chocolateboard.net/tags/coffeescript/</loc>
     <lastmod>2013-09-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/compass/</loc>
+    <loc>https://log.chocolateboard.net/tags/compass/</loc>
     <lastmod>2013-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/categories/design/</loc>
+    <loc>https://log.chocolateboard.net/categories/design/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/diary/</loc>
+    <loc>https://log.chocolateboard.net/tags/diary/</loc>
     <lastmod>2013-06-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/ect/</loc>
+    <loc>https://log.chocolateboard.net/tags/ect/</loc>
     <lastmod>2013-09-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/flickr/</loc>
+    <loc>https://log.chocolateboard.net/tags/flickr/</loc>
     <lastmod>2014-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/git/</loc>
+    <loc>https://log.chocolateboard.net/tags/git/</loc>
     <lastmod>2016-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/github/</loc>
+    <loc>https://log.chocolateboard.net/tags/github/</loc>
     <lastmod>2017-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/grep/</loc>
+    <loc>https://log.chocolateboard.net/tags/grep/</loc>
     <lastmod>2013-08-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/grunt/</loc>
+    <loc>https://log.chocolateboard.net/tags/grunt/</loc>
     <lastmod>2014-01-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/homebrew/</loc>
+    <loc>https://log.chocolateboard.net/tags/homebrew/</loc>
     <lastmod>2014-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/hugo/</loc>
+    <loc>https://log.chocolateboard.net/tags/hugo/</loc>
     <lastmod>2017-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/instagram/</loc>
+    <loc>https://log.chocolateboard.net/tags/instagram/</loc>
     <lastmod>2014-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/iterm/</loc>
+    <loc>https://log.chocolateboard.net/tags/iterm/</loc>
     <lastmod>2016-03-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/javascript/</loc>
+    <loc>https://log.chocolateboard.net/tags/javascript/</loc>
     <lastmod>2014-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/jquery/</loc>
+    <loc>https://log.chocolateboard.net/tags/jquery/</loc>
     <lastmod>2014-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/markdown/</loc>
+    <loc>https://log.chocolateboard.net/tags/markdown/</loc>
     <lastmod>2013-07-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/middleman/</loc>
+    <loc>https://log.chocolateboard.net/tags/middleman/</loc>
     <lastmod>2015-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/categories/misc/</loc>
+    <loc>https://log.chocolateboard.net/categories/misc/</loc>
     <lastmod>2013-06-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/oh-my-zsh/</loc>
+    <loc>https://log.chocolateboard.net/tags/oh-my-zsh/</loc>
     <lastmod>2016-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/plugins/</loc>
+    <loc>https://log.chocolateboard.net/tags/plugins/</loc>
     <lastmod>2014-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/privacy/</loc>
+    <loc>https://log.chocolateboard.net/privacy/</loc>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/rss/</loc>
+    <loc>https://log.chocolateboard.net/tags/rss/</loc>
     <lastmod>2015-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/sass/</loc>
+    <loc>https://log.chocolateboard.net/tags/sass/</loc>
     <lastmod>2013-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/sketch/</loc>
+    <loc>https://log.chocolateboard.net/tags/sketch/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/slim/</loc>
+    <loc>https://log.chocolateboard.net/tags/slim/</loc>
     <lastmod>2015-03-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/st2/</loc>
+    <loc>https://log.chocolateboard.net/tags/st2/</loc>
     <lastmod>2013-08-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/st3/</loc>
+    <loc>https://log.chocolateboard.net/tags/st3/</loc>
     <lastmod>2013-07-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/sublimetext/</loc>
+    <loc>https://log.chocolateboard.net/tags/sublimetext/</loc>
     <lastmod>2013-08-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/</loc>
+    <loc>https://log.chocolateboard.net/tags/</loc>
+    <lastmod>2014-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/template/</loc>
+    <loc>https://log.chocolateboard.net/tags/template/</loc>
     <lastmod>2013-09-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/themes/</loc>
+    <loc>https://log.chocolateboard.net/tags/themes/</loc>
     <lastmod>2016-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/three/index.js/</loc>
+    <loc>https://log.chocolateboard.net/tags/three.js/</loc>
     <lastmod>2016-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/xcode/</loc>
+    <loc>https://log.chocolateboard.net/tags/xcode/</loc>
     <lastmod>2015-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/tags/zsh/</loc>
+    <loc>https://log.chocolateboard.net/tags/zsh/</loc>
     <lastmod>2016-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://log.chocolateboard.net/</loc>
+    <loc>https://log.chocolateboard.net/</loc>
     <lastmod>2017-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

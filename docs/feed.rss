@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
 <channel>
   <title>log.chocolateboard</title>
-  <link>http://log.chocolateboard.net/index.xml</link>
+  <link>https://log.chocolateboard.net/</link>
   
   <author>Aki Fukayama</author>
   <description>ここは、Web 制作についてのメモ置き場です。読んでくれる誰かのことを想って書いています。</description>
@@ -11,10 +11,10 @@
   
     <item>
       <title>Middleman から Hugo に移行しました</title>
-      <link>http://log.chocolateboard.net/hugo-2017/</link>
+      <link>https://log.chocolateboard.net/hugo-2017/</link>
       <pubDate>Sat, 21 Jan 2017 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/hugo-2017/</guid>
+      <guid>https://log.chocolateboard.net/hugo-2017/</guid>
       <description><![CDATA[
 
 <p>去年の8月に Go の会社に転職したので、Middleman から Hugo に乗り換える決意をした。</p>
@@ -119,10 +119,10 @@
   
     <item>
       <title>three.js をさわってみた</title>
-      <link>http://log.chocolateboard.net/three-js-particles/</link>
+      <link>https://log.chocolateboard.net/three-js-particles/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/three-js-particles/</guid>
+      <guid>https://log.chocolateboard.net/three-js-particles/</guid>
       <description><![CDATA[<p><a href="https://threejs.org/">three.js</a> をさわってみた。<br />
 ドキュメントを読みながらパーティクルをつくった。
 3D のことも WebGL のこともちゃんと理解できてないのでちゃんと勉強したい。</p>
@@ -131,17 +131,18 @@
 
 <cite>
 </cite>
-<p data-height="400" data-theme-id="7235" data-slug-hash="JboPwZ" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="http://codepen.io/akey">@akey</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="7235" data-slug-hash="JboPwZ" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 ]]></description>
     </item>
   
     <item>
       <title>git: Git LFS を使ってみた</title>
-      <link>http://log.chocolateboard.net/git-lfs/</link>
+      <link>https://log.chocolateboard.net/git-lfs/</link>
       <pubDate>Thu, 03 Nov 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/git-lfs/</guid>
+      <guid>https://log.chocolateboard.net/git-lfs/</guid>
       <description><![CDATA[
 
 <p>デザインデータを Git 管理するために <em>Git Large File Storage</em> を試してみた。<br />
@@ -259,10 +260,10 @@ GUI でも大丈夫ってことがわかった。（SourceTree は試してな�
   
     <item>
       <title>zsh: oh-my-zsh の wedisagree というテーマを使うことにした</title>
-      <link>http://log.chocolateboard.net/oh-my-zsh-wedisagree/</link>
+      <link>https://log.chocolateboard.net/oh-my-zsh-wedisagree/</link>
       <pubDate>Sun, 06 Mar 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/oh-my-zsh-wedisagree/</guid>
+      <guid>https://log.chocolateboard.net/oh-my-zsh-wedisagree/</guid>
       <description><![CDATA[<p>zsh を使うようになったので <a href="http://ohmyz.sh/">oh-my-zsh</a> というものを入れてみました。
 あっとゆう間になんかリッチな感じになったので、とりあえずこのまま使ってみることに。</p>
 
@@ -286,10 +287,10 @@ git のステータスがお天気マークで表示されるのがかわいい�
   
     <item>
       <title>iTerm2: iTerm のカラースキームを作った</title>
-      <link>http://log.chocolateboard.net/itermcolors/</link>
+      <link>https://log.chocolateboard.net/itermcolors/</link>
       <pubDate>Sat, 05 Mar 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/itermcolors/</guid>
+      <guid>https://log.chocolateboard.net/itermcolors/</guid>
       <description><![CDATA[<p>iTerm2 のカラースキームをつくりました。可愛い感じにしました。
 ちょっとまぶしい気もする&hellip;しばらく使ってみつつ調整しようと思います。</p>
 
@@ -303,10 +304,10 @@ git のステータスがお天気マークで表示されるのがかわいい�
   
     <item>
       <title>Sketch: 自動保存を無効にする</title>
-      <link>http://log.chocolateboard.net/sketch-auto-save/</link>
+      <link>https://log.chocolateboard.net/sketch-auto-save/</link>
       <pubDate>Tue, 23 Feb 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/sketch-auto-save/</guid>
+      <guid>https://log.chocolateboard.net/sketch-auto-save/</guid>
       <description><![CDATA[<p>ここ最近ずっと悩んでいたこと -&gt;「起動ディスクが一杯です」。</p>
 
 <p>原因を調べると、だいたい Sketch.app の Auto-Save 機能によるデータが圧迫していることが多い(´・ω・`)</p>
@@ -329,10 +330,10 @@ git のステータスがお天気マークで表示されるのがかわいい�
   
     <item>
       <title>zsh: Ctrl-R とか Ctrl-A とか Ctrl-E とかが効かなくなった</title>
-      <link>http://log.chocolateboard.net/sh-bindkey/</link>
+      <link>https://log.chocolateboard.net/sh-bindkey/</link>
       <pubDate>Thu, 11 Feb 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/sh-bindkey/</guid>
+      <guid>https://log.chocolateboard.net/sh-bindkey/</guid>
       <description><![CDATA[<p>普段 Ctrl-R とかを多用しているので、突然効かなくなってものすごく焦った。</p>
 
 <p>そういえば <code>.zshrc</code> 編集したんだった！と思い至ったけれど、どの設定が悪いのかよくわからなくて涙目。
@@ -349,10 +350,10 @@ git のステータスがお天気マークで表示されるのがかわいい�
   
     <item>
       <title>Middleman に移行して Feed の URL を変更しました</title>
-      <link>http://log.chocolateboard.net/middleman-feed-url/</link>
+      <link>https://log.chocolateboard.net/middleman-feed-url/</link>
       <pubDate>Tue, 17 Mar 2015 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/middleman-feed-url/</guid>
+      <guid>https://log.chocolateboard.net/middleman-feed-url/</guid>
       <description><![CDATA[
 
 <p>Middleman 引っ越し done !! なのだけど、Feed の URL が WordPress の時と変わってしまった。
@@ -382,10 +383,10 @@ git のステータスがお天気マークで表示されるのがかわいい�
   
     <item>
       <title>WordPress から Middleman に移行しました</title>
-      <link>http://log.chocolateboard.net/middleman-blog-2015/</link>
+      <link>https://log.chocolateboard.net/middleman-blog-2015/</link>
       <pubDate>Sat, 14 Mar 2015 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/middleman-blog-2015/</guid>
+      <guid>https://log.chocolateboard.net/middleman-blog-2015/</guid>
       <description><![CDATA[
 
 <p>年末に移行作業に手をつけて放置していたものを、やっと終わらせました。
@@ -642,10 +643,10 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
   
     <item>
       <title>Xcode: プラグインマネージャ「Alcatraz」を入れてみた</title>
-      <link>http://log.chocolateboard.net/xcode-alcatraz/</link>
+      <link>https://log.chocolateboard.net/xcode-alcatraz/</link>
       <pubDate>Wed, 11 Feb 2015 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/xcode-alcatraz/</guid>
+      <guid>https://log.chocolateboard.net/xcode-alcatraz/</guid>
       <description><![CDATA[<p>Xcode のエディタを黒くしよう！って思ってググったらプラグインマネージャ「<a href="http://alcatraz.io/">Alcatraz</a>」なるものをみつけた。とりあえずカタチから入る。</p>
 
 <p>ターミナルで下記実行して、Xcode を再起動するとメニューの <em>Window</em> に <em>Package Manager</em> が追加される。</p>
@@ -675,10 +676,10 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
   
     <item>
       <title>JavaScript: Flickr API を使って写真を取得・表示する jQuery プラグイン</title>
-      <link>http://log.chocolateboard.net/jquery-akflickr/</link>
+      <link>https://log.chocolateboard.net/jquery-akflickr/</link>
       <pubDate>Sun, 30 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/jquery-akflickr/</guid>
+      <guid>https://log.chocolateboard.net/jquery-akflickr/</guid>
       <description><![CDATA[
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その4です（目標達成まであと6つ）。</p>
@@ -701,7 +702,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
 <p><cite></p>
 
 <p></cite>
-<p data-height="400" data-theme-id="7235" data-slug-hash="jEOXYM" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="http://codepen.io/akey">@akey</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="7235" data-slug-hash="jEOXYM" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
 
 <section id="p2">
@@ -827,10 +828,10 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
   
     <item>
       <title>JavaScript: Instagram API を使って自分の写真を取得・表示する jQuery プラグイン</title>
-      <link>http://log.chocolateboard.net/jquery-akinstagram/</link>
+      <link>https://log.chocolateboard.net/jquery-akinstagram/</link>
       <pubDate>Fri, 14 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/jquery-akinstagram/</guid>
+      <guid>https://log.chocolateboard.net/jquery-akinstagram/</guid>
       <description><![CDATA[
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その3です（目標達成まであと7つ）。</p>
@@ -853,7 +854,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
 <p><cite></p>
 
 <p></cite>
-<p data-height="400" data-theme-id="7235" data-slug-hash="GgRRqd" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="http://codepen.io/akey">@akey</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="7235" data-slug-hash="GgRRqd" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
 
 <section id="p2">
@@ -968,10 +969,10 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
   
     <item>
       <title>JavaScript: ブクログの非公式 API を使って本の情報を取得・表示する jQuery プラグイン</title>
-      <link>http://log.chocolateboard.net/jquery-akbooklog/</link>
+      <link>https://log.chocolateboard.net/jquery-akbooklog/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/jquery-akbooklog/</guid>
+      <guid>https://log.chocolateboard.net/jquery-akbooklog/</guid>
       <description><![CDATA[
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その2です（目標達成まであと8つ）。</p>
@@ -996,7 +997,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
 <p><cite></p>
 
 <p></cite>
-<p data-height="400" data-theme-id="7235" data-slug-hash="gEqcL" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="http://codepen.io/akey">@akey</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="7235" data-slug-hash="gEqcL" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
 
 <section id="p2">
@@ -1049,10 +1050,10 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
   
     <item>
       <title>JavaScript: 画像の上に文字がスライドインするやつをお手軽にできる jQuery プラグイン</title>
-      <link>http://log.chocolateboard.net/jquery-aktextoverlay/</link>
+      <link>https://log.chocolateboard.net/jquery-aktextoverlay/</link>
       <pubDate>Sat, 08 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/jquery-aktextoverlay/</guid>
+      <guid>https://log.chocolateboard.net/jquery-aktextoverlay/</guid>
       <description><![CDATA[
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その1です。目標はその10くらいまで書くこと。</p>
@@ -1077,7 +1078,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
 <p><cite></p>
 
 <p></cite>
-<p data-height="540" data-theme-id="7235" data-slug-hash="dinbJ" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="http://codepen.io/akey">@akey</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="540" data-theme-id="7235" data-slug-hash="dinbJ" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
 
 <section id="p2">
@@ -1116,10 +1117,10 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
   
     <item>
       <title>Bash: Tab キーによる補完機能を有効にする</title>
-      <link>http://log.chocolateboard.net/homebrew-bash-completion/</link>
+      <link>https://log.chocolateboard.net/homebrew-bash-completion/</link>
       <pubDate>Mon, 24 Mar 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>http://log.chocolateboard.net/homebrew-bash-completion/</guid>
+      <guid>https://log.chocolateboard.net/homebrew-bash-completion/</guid>
       <description><![CDATA[<p>お家 mac でも黒い画面で git しよう！と思った私のメモその2。</p>
 
 <p>Tab キーの補完機能を有効にしてみた。</p>

@@ -60,7 +60,7 @@ ECT のテンプレートファイルの拡張子は *.ect* でなくても大�
 
 grunt-ect の導入については過去記事をご確認ください。
 
-- [Template Engine: ECT を Grunt でコンパイルする準備](http://log.chocolateboard.net/template-engine-ect-grunt-setting/)
+- [Template Engine: ECT を Grunt でコンパイルする準備](https://log.chocolateboard.net/template-engine-ect-grunt-setting/)
 
 ```javascript
 'use strict';
