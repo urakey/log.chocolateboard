@@ -9,7 +9,7 @@ function Hatena($elem) {
 
   this.init.apply(this);
 }
-Hatena.URL = 'http://log.chocolateboard.net';
+Hatena.URL = 'https://log.chocolateboard.net';
 Hatena.prototype = {
 
   init: function() {
@@ -22,7 +22,7 @@ Hatena.prototype = {
 
     $.ajax({
       type: 'GET',
-      url:  'http://b.hatena.ne.jp/entrylist/json',
+      url:  'https://b.hatena.ne.jp/entrylist/json',
       data: {
         sort: _this.sort,
         url: Hatena.URL
