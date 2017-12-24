@@ -5,7 +5,7 @@ require('./plugins/jquery.smoothScroll');
   "use strict";
 
   var Browser = require('./modules/Browser');
-  var Hatena  = require('./modules/Hatena');
+  // var Hatena  = require('./modules/Hatena');
 
   //===========================================================================
   //  関数
@@ -31,7 +31,7 @@ require('./plugins/jquery.smoothScroll');
     //-------------------------------------------------------------------------
     // ** Hatena
     //-------------------------------------------------------------------------
-    var hatena = new Hatena($('#HatenaEntries'));
+    // var hatena = new Hatena($('#HatenaEntries'));
   }
 
   //===========================================================================
