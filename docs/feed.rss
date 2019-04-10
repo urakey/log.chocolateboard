@@ -15,7 +15,7 @@
       <pubDate>Sat, 21 Jan 2017 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/hugo-2017/</guid>
-      <description><![CDATA[
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2017/01/hugo-2017/eyecatch.png" alt="" itemprop="image"></figure>
 
 <p>去年の8月に Go の会社に転職したので、Middleman から Hugo に乗り換える決意をした。</p>
 
@@ -123,7 +123,7 @@
       <pubDate>Sun, 06 Nov 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/three-js-particles/</guid>
-      <description><![CDATA[<p><a href="https://threejs.org/">three.js</a> をさわってみた。<br />
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2016/11/three-js-particles/eyecatch.png" alt="" itemprop="image"></figure><p><a href="https://threejs.org/">three.js</a> をさわってみた。<br />
 ドキュメントを読みながらパーティクルをつくった。
 3D のことも WebGL のこともちゃんと理解できてないのでちゃんと勉強したい。</p>
 
@@ -143,7 +143,7 @@
       <pubDate>Thu, 03 Nov 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/git-lfs/</guid>
-      <description><![CDATA[
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2016/11/git-lfs/eyecatch.png" alt="" itemprop="image"></figure>
 
 <p>デザインデータを Git 管理するために <em>Git Large File Storage</em> を試してみた。<br />
 これで1ファイルあたり 100MB 超えても <code>push</code> できる。</p>
@@ -264,7 +264,7 @@ GUI でも大丈夫ってことがわかった。（SourceTree は試してな�
       <pubDate>Sun, 06 Mar 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/oh-my-zsh-wedisagree/</guid>
-      <description><![CDATA[<p>zsh を使うようになったので <a href="http://ohmyz.sh/">oh-my-zsh</a> というものを入れてみました。
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2016/03/oh-my-zsh-wedisagree/eyecatch.png" alt="" itemprop="image"></figure><p>zsh を使うようになったので <a href="http://ohmyz.sh/">oh-my-zsh</a> というものを入れてみました。
 あっとゆう間になんかリッチな感じになったので、とりあえずこのまま使ってみることに。</p>
 
 <p>zsh に Theme があるようなので、いろいろ迷った結果「wedisagree」を使うことにしました。
@@ -291,7 +291,7 @@ git のステータスがお天気マークで表示されるのがかわいい�
       <pubDate>Sat, 05 Mar 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/itermcolors/</guid>
-      <description><![CDATA[<p>iTerm2 のカラースキームをつくりました。可愛い感じにしました。
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2016/03/itermcolors/eyecatch.png" alt="" itemprop="image"></figure><p>iTerm2 のカラースキームをつくりました。可愛い感じにしました。
 ちょっとまぶしい気もする&hellip;しばらく使ってみつつ調整しようと思います。</p>
 
 <p>GitHub に置いてありますので気に入っていただけた方はご自由にどうぞ ;D</p>
@@ -308,7 +308,7 @@ git のステータスがお天気マークで表示されるのがかわいい�
       <pubDate>Tue, 23 Feb 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/sketch-auto-save/</guid>
-      <description><![CDATA[<p>ここ最近ずっと悩んでいたこと -&gt;「起動ディスクが一杯です」。</p>
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2016/02/sketch-auto-save/eyecatch.png" alt="" itemprop="image"></figure><p>ここ最近ずっと悩んでいたこと -&gt;「起動ディスクが一杯です」。</p>
 
 <p>原因を調べると、だいたい Sketch.app の Auto-Save 機能によるデータが圧迫していることが多い(´・ω・`)</p>
 
@@ -334,7 +334,7 @@ git のステータスがお天気マークで表示されるのがかわいい�
       <pubDate>Thu, 11 Feb 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/sh-bindkey/</guid>
-      <description><![CDATA[<p>普段 Ctrl-R とかを多用しているので、突然効かなくなってものすごく焦った。</p>
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2016/02/zsh-bindkey/eyecatch.png" alt="" itemprop="image"></figure><p>普段 Ctrl-R とかを多用しているので、突然効かなくなってものすごく焦った。</p>
 
 <p>そういえば <code>.zshrc</code> 編集したんだった！と思い至ったけれど、どの設定が悪いのかよくわからなくて涙目。
 心当たりがあるのは <code>bindkey -v</code> て記述足したことくらいだったので、そこのとこ調べてみた。</p>
@@ -354,7 +354,7 @@ git のステータスがお天気マークで表示されるのがかわいい�
       <pubDate>Tue, 17 Mar 2015 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/middleman-feed-url/</guid>
-      <description><![CDATA[
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2015/03/middleman-feed-url/eyecatch.png" alt="" itemprop="image"></figure>
 
 <p>Middleman 引っ越し done !! なのだけど、Feed の URL が WordPress の時と変わってしまった。
 <code>http://chocolateboard.net/feed/</code> だったものが <code>http://chocolateboard.net/feed.rss</code> に、
@@ -387,7 +387,7 @@ git のステータスがお天気マークで表示されるのがかわいい�
       <pubDate>Sat, 14 Mar 2015 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/middleman-blog-2015/</guid>
-      <description><![CDATA[
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2015/03/middleman-blog-2015/eyecatch.png" alt="" itemprop="image"></figure>
 
 <p>年末に移行作業に手をつけて放置していたものを、やっと終わらせました。
 移行したいと思ったきっかけは <code>$ middleman deploy</code> で公開！みたいなことがしたかったから。
@@ -647,7 +647,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
       <pubDate>Wed, 11 Feb 2015 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/xcode-alcatraz/</guid>
-      <description><![CDATA[<p>Xcode のエディタを黒くしよう！って思ってググったらプラグインマネージャ「<a href="http://alcatraz.io/">Alcatraz</a>」なるものをみつけた。とりあえずカタチから入る。</p>
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2015/02/xcode-alcatraz/eyecatch.png" alt="" itemprop="image"></figure><p>Xcode のエディタを黒くしよう！って思ってググったらプラグインマネージャ「<a href="http://alcatraz.io/">Alcatraz</a>」なるものをみつけた。とりあえずカタチから入る。</p>
 
 <p>ターミナルで下記実行して、Xcode を再起動するとメニューの <em>Window</em> に <em>Package Manager</em> が追加される。</p>
 
@@ -680,7 +680,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
       <pubDate>Sun, 30 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/jquery-akflickr/</guid>
-      <description><![CDATA[
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akflickr/eyecatch.jpg" alt="" itemprop="image"></figure>
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その4です（目標達成まであと6つ）。</p>
 
@@ -832,7 +832,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
       <pubDate>Fri, 14 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/jquery-akinstagram/</guid>
-      <description><![CDATA[
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akinstagram/eyecatch.png" alt="" itemprop="image"></figure>
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その3です（目標達成まであと7つ）。</p>
 
@@ -973,7 +973,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
       <pubDate>Sun, 09 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/jquery-akbooklog/</guid>
-      <description><![CDATA[
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akbooklog/eyecatch.jpg" alt="" itemprop="image"></figure>
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その2です（目標達成まであと8つ）。</p>
 
@@ -1054,7 +1054,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
       <pubDate>Sat, 08 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/jquery-aktextoverlay/</guid>
-      <description><![CDATA[
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2014/11/jquery-aktextoverlay/eyecatch.jpg" alt="" itemprop="image"></figure>
 
 <p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その1です。目標はその10くらいまで書くこと。</p>
 
@@ -1121,7 +1121,7 @@ DNS の設定をいじってしばらく待ったら反映されました ^^</p>
       <pubDate>Mon, 24 Mar 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
       <guid>https://log.chocolateboard.net/homebrew-bash-completion/</guid>
-      <description><![CDATA[<p>お家 mac でも黒い画面で git しよう！と思った私のメモその2。</p>
+      <description><![CDATA[<figure><img src="http://log.chocolateboard.net/assets/images/posts/2014/03/homebrew-bash-completion/eyecatch.png" alt="" itemprop="image"></figure><p>お家 mac でも黒い画面で git しよう！と思った私のメモその2。</p>
 
 <p>Tab キーの補完機能を有効にしてみた。</p>
 
