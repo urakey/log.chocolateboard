@@ -62,7 +62,7 @@ gulp.task('browserify', function() {
         });
     }))
     .pipe(gulp.dest(PATHS.dest + '/scripts'));
-})
+});
 
 gulp.task('minify:js', function() {
   return gulp.src(PATHS.dest + '/scripts/*.js')
@@ -97,8 +97,8 @@ gulp.task('format:html', function () {
 gulp.task('minify:images', function() {
   return gulp.src(PATHS.src + '/images/**/*')
     .pipe($.imagemin())
-    .pipe(gulp.dest(PATHS.dest + '/images'))
-})
+    .pipe(gulp.dest(PATHS.dest + '/images'));
+});
 
 // -----------------------------------------------------------------------------
 // Build: レイアウト更新するときなどに実行する
@@ -116,20 +116,20 @@ gulp.task('copy:js', function() {
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/jquery_lazyload/jquery.lazyload.min.js'
     ])
-    .pipe(gulp.dest(PATHS.dest + '/scripts/vendor'))
-})
+    .pipe(gulp.dest(PATHS.dest + '/scripts/vendor'));
+});
 
 gulp.task('copy:fonts', function() {
   return gulp.src('node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest(PATHS.dest + '/fonts'))
-})
+    .pipe(gulp.dest(PATHS.dest + '/fonts'));
+});
 
 gulp.task('format:rss', function() {
   return gulp.src(PATHS.publishdir + '/index.xml')
     .pipe($.replace('img src="/assets/images/', 'img src="' + DOMAIN + '/assets/images/'))
     .pipe($.rename('feed.rss'))
-    .pipe(gulp.dest(PATHS.publishdir))
-})
+    .pipe(gulp.dest(PATHS.publishdir));
+});
 
 gulp.task('clean', function() {
   del([PATHS.publishdir + '/**/index.xml', '!' + PATHS.publishdir + '/index.xml']);

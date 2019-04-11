@@ -9,7 +9,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RZX8R');</script>
 {{ "<!-- End Google Tag Manager -->" | safeHTML }}
+{{ if .IsHome }}
+<title>{{ .Site.Title }}</title>
+{{ else }}
 <title>{{ with .Data.Plural }}{{ . }} :: {{ end }}{{ with .Title }}{{ . | safeHTML }} :: {{ end }}{{ .Site.Title }}</title>
+{{ end }}
 <meta name="description" content="{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="viewport" content="width=device-width">
 <link rel="author" href="{{ .Site.Author.url }}">
