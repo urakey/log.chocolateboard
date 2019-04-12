@@ -10,13 +10,13 @@ $ npm install
 ## Start server
 
 ```
-$ npm run start
+$ npm run-script start
 ```
 
 ## Build
 
 ```
-$ npm run build
+$ npm run-script build
 ```
 
 ## Deploy
