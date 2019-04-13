@@ -9,7 +9,7 @@ var del             = require('del');
 
 var $ = gulpLoadPlugins();
 
-var DOMAIN = 'http://log.chocolateboard.net';
+var DOMAIN = 'https://log.chocolateboard.net';
 var PATHS = {
   src:  './assets',
   dest: './static/assets',
