@@ -71,57 +71,62 @@
 
 <hr />
 
+
 <section id="profile">
-  
-## Self introduction.
+  <h2 id="self-introduction">Self introduction.</h2>
 
-[自己紹介はここにまとめました → [ About :: chocolateboard. ]](
-  https://chocolateboard.net
-/about/#profile)
+<p><a href="https://chocolateboard.net
+/about/#profile">自己紹介はここにまとめました → [ About :: chocolateboard. ]</a></p>
 
-## About this website.
+<h2 id="about-this-website">About this website.</h2>
 
-*chocolateboard* という名前に深い意味はありません。  
-ドメイン取得時に所持していたスケートボードの板が [Chocolate Skateboards](http://www.chocolateskateboards.com/) のものだったこと、チョコレートが好きなこと、デッキとチョコレートで板チョコっぽいなと思ったことなどから過去に取得したドメインです。
+<p><em>chocolateboard</em> という名前に深い意味はありません。<br />
+ドメイン取得時に所持していたスケートボードの板が <a href="http://www.chocolateskateboards.com/">Chocolate Skateboards</a> のものだったこと、チョコレートが好きなこと、デッキとチョコレートで板チョコっぽいなと思ったことなどから過去に取得したドメインです。</p>
 
-*log.chocolateboard* のコンテンツは Hugo で更新しています。
+<p><em>log.chocolateboard</em> のコンテンツは Hugo で更新しています。</p>
 
-Chrome・Safari・Firefox・Opera 最新版でのみ意図した表示となっています。  
-IE8 以下は対応する予定がありません。
+<p>Chrome・Safari・Firefox・Opera 最新版でのみ意図した表示となっています。<br />
+IE8 以下は対応する予定がありません。</p>
 
-実験したりなどもしておりますので、画面が真っ白になっているときは大体なにかに失敗している時です mm  
-ご了承くださいませ。
+<p>実験したりなどもしておりますので、画面が真っ白になっているときは大体なにかに失敗している時です mm<br />
+ご了承くださいませ。</p>
 
-[プライバシーポリシーについてはこちら](/privacy/)
+<p><a href="/privacy/">プライバシーポリシーについてはこちら</a></p>
 
 </section>
+
+
 
 <section id="recipe">
-  
-## Website recipe.
+  <h2 id="website-recipe">Website recipe.</h2>
 
-### Design
+<h3 id="design">Design</h3>
 
-Sass のグローバルな変数として、キーカラー1色とダークカラー1色を持っています。  
-タブレットやスマートフォンの対応はメディアクエリで対応しているのみです。  
-主にカラム幅の変更・組み換え・表示非表示切り替えのみ。
+<p>Sass のグローバルな変数として、キーカラー1色とダークカラー1色を持っています。<br />
+タブレットやスマートフォンの対応はメディアクエリで対応しているのみです。<br />
+主にカラム幅の変更・組み換え・表示非表示切り替えのみ。</p>
 
-アイコンは *Font Awesome* のものです。
+<p>アイコンは <em>Font Awesome</em> のものです。</p>
 
-- [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
-- [Google Web Fonts: PT Sans](https://www.google.com/fonts/specimen/PT+Sans)
+<ul>
+<li><a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a></li>
+<li><a href="https://www.google.com/fonts/specimen/PT+Sans">Google Web Fonts: PT Sans</a></li>
+</ul>
 
-### Coding
+<h3 id="coding">Coding</h3>
 
-CSS は Sass の SCSS 記法を採用しています。
+<p>CSS は Sass の SCSS 記法を採用しています。</p>
 
-- [GitHub](https://github.com/)
-- [GitHub Pages](https://pages.github.com/)
-- [Hugo](https://gohugo.io/)
-- [gulp.js](http://gulpjs.com/)
-- [Atom](https://atom.io/)
+<ul>
+<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="https://pages.github.com/">GitHub Pages</a></li>
+<li><a href="https://gohugo.io/">Hugo</a></li>
+<li><a href="http://gulpjs.com/">gulp.js</a></li>
+<li><a href="https://atom.io/">Atom</a></li>
+</ul>
 
 </section>
+
 ]]></description>
     </item>
   
@@ -143,51 +148,56 @@ CSS は Sass の SCSS 記法を採用しています。
 
 <hr />
 
+
 <section id="p1">
-  
-## 個人情報保護の基本方針
+  <h2 id="個人情報保護の基本方針">個人情報保護の基本方針</h2>
 
-1. 個人情報の利用目的をできるだけ特定し、特定された利用目的の達成に必要な範囲を超えて利用することはありません。
-1. 個人情報を偽りその他不正な手段による取得しません。取得したときは、本人に速やかに利用目的を通知又は公表します。
-1. 個人情報を利用目的の範囲内で正確かつ最新の内容に保つように努めます。
-1. 個人情報の漏洩や滅失を防ぐために、必要かつ適切な安全管理措置を講じます。
-1. あらかじめ本人の同意を得ないで第三者に個人情報を提供することはありません。
+<ol>
+<li>個人情報の利用目的をできるだけ特定し、特定された利用目的の達成に必要な範囲を超えて利用することはありません。</li>
+<li>個人情報を偽りその他不正な手段による取得しません。取得したときは、本人に速やかに利用目的を通知又は公表します。</li>
+<li>個人情報を利用目的の範囲内で正確かつ最新の内容に保つように努めます。</li>
+<li>個人情報の漏洩や滅失を防ぐために、必要かつ適切な安全管理措置を講じます。</li>
+<li>あらかじめ本人の同意を得ないで第三者に個人情報を提供することはありません。</li>
+</ol>
 
-ただし、法令に基づく場合、人の生命、身体又は財産の保護に必要な場合、公衆衛生・児童の健全育成に特に必要な場合、国等に協力する場合は除きます。
+<p>ただし、法令に基づく場合、人の生命、身体又は財産の保護に必要な場合、公衆衛生・児童の健全育成に特に必要な場合、国等に協力する場合は除きます。</p>
 
 </section>
 
+
+
 <section id="p2">
-  
-## 掲載されている広告について
+  <h2 id="掲載されている広告について">掲載されている広告について</h2>
 
-当サイト（
+<p>当サイト（
   log.chocolateboard
-）では、第三者配信の広告サービス（Google AdSense、A8.net、Amazonアソシエイト、iTunes アフィリエイトプログラム、Link Share Japan）を利用しています。
+）では、第三者配信の広告サービス（Google AdSense、A8.net、Amazonアソシエイト、iTunes アフィリエイトプログラム、Link Share Japan）を利用しています。</p>
 
-このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイト（
+<p>このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイト（
   log.chocolateboard
-）や他サイトへのアクセスに関する情報『Cookie』を使用することがあります。
+）や他サイトへのアクセスに関する情報『Cookie』を使用することがあります。</p>
 
 <p class="notes">氏名、住所、メール アドレス、電話番号は含まれません。</p>
 
-また、Google AdSenseに関してこのプロセスの詳細やこのような情報が広告配信事業者に使用されないようにする方法については、『[ポリシーと原則](http://www.google.co.jp/policies/technologies/ads/)』をご確認ください。
+<p>また、Google AdSenseに関してこのプロセスの詳細やこのような情報が広告配信事業者に使用されないようにする方法については、『<a href="http://www.google.co.jp/policies/technologies/ads/">ポリシーと原則</a>』をご確認ください。</p>
 
 </section>
+
+
 
 <section id="p3">
-  
-## アクセス解析ツールについて
+  <h2 id="アクセス解析ツールについて">アクセス解析ツールについて</h2>
 
-当サイト（
+<p>当サイト（
   log.chocolateboard
-）では、アクセス解析ツールとして『Google Analytics』を利用しています。
+）では、アクセス解析ツールとして『Google Analytics』を利用しています。</p>
 
-『Google Analytics』はトラフィックデータの収集のために『Cookie』を使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。収集を拒否するには、ブラウザの設定から『Cookie』を無効にしてください。
+<p>『Google Analytics』はトラフィックデータの収集のために『Cookie』を使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。収集を拒否するには、ブラウザの設定から『Cookie』を無効にしてください。</p>
 
-この規約に関して、詳しくは『[Google アナリティクス サービス利用規約](http://www.google.com/analytics/terms/jp.html)』をご確認ください。
+<p>この規約に関して、詳しくは『<a href="http://www.google.com/analytics/terms/jp.html">Google アナリティクス サービス利用規約</a>』をご確認ください。</p>
 
 </section>
+
 ]]></description>
     </item>
   
