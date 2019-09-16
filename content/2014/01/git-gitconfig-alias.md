@@ -41,9 +41,10 @@ eyecatch:   '/assets/images/posts/2014/01/git-gitconfig-alias/eyecatch.png'
   d = diff
   dc = diff --cached
   w = whatchanged
-  graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
-  g = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+  graph = log --graph --date-order -C -M --pretty='format:%C(yellow)%h%C(red)%d%Creset %s %C(cyan bold)%an, %ar%Creset'
+  g = log --graph --date-order -C -M --pretty='format:%C(yellow)%h%C(red)%d%Creset %s %C(cyan bold)%an, %ar%Creset'
   url = config --get remote.origin.url
+  bad = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
 ```
 
 `git g` のお陰で SourceTree なくても大丈夫になった！

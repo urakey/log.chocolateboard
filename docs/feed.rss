@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
 <channel>
   <title>log.chocolateboard</title>
@@ -10,1148 +9,183 @@
   <lastBuildDate>Sat, 21 Jan 2017 00:00:00 UTC</lastBuildDate>
   
     <item>
-      <title>Middleman から Hugo に移行しました</title>
-      <link>https://log.chocolateboard.net/hugo-2017/</link>
+      <title>2017s</title>
+      <link>https://log.chocolateboard.net/2017/</link>
       <pubDate>Sat, 21 Jan 2017 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/hugo-2017/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2017/01/hugo-2017/eyecatch.png" alt="" itemprop="image"></figure>
-
-<p>去年の8月に Go の会社に転職したので、Middleman から Hugo に乗り換える決意をした。</p>
-
-<p>おすすめの記事はこちら★<br />
-<a href="http://mercan.mercari.com/entry/2016/11/04/111332">Go経験者０人スタート！メルカリ アッテ サーバサイドエンジニア事情</a></p>
-
-<p>乗り換えたのは去年の10月くらいだったのだけど、乗り換え記録を書いていなかったので、年明けた今書くことに^^</p>
-
-<p>ちなみにこの移行をきっかけに <code>gulp build</code> てしてたのを <code>npm run build</code> ってする感じにしたのは、個人的な進歩★</p>
-
-<hr />
-
-<h2 id="index">Index</h2>
-
-<ul>
-<li><a href="#p1">移行手順メモ</a></li>
-<li><a href="#p2">GitHub Pages でホスティング</a></li>
-<li><a href="#p3">感想</a></li>
-<li><a href="#p4">積み残しタスク</a></li>
-</ul>
-
-<hr />
-
-<section id="p1">
-  <h2 id="移行手順メモ">移行手順メモ</h2>
-
-<ol>
-<li>Hugo をインストールして<a href="https://gohugo.io/overview/introduction/">ドキュメント</a>を読んだ</li>
-<li>Slim でコーディングしてたテンプレートを書き直して Hugo のお作法に則って分解</li>
-<li>Middleman 環境でビルドしてた静的ファイル系を <code>gulp</code> でビルドするように変更</li>
-<li>Middleman のアセットパイプラインに依存してたものを <code>npm</code> に集約</li>
-<li>CustomRenderer で書き換えてた HTML を <code>gulp replace</code> と Hugo の <code>shortcodes</code> に置き換え</li>
-<li>作った shortcodes に合わせてマークダウンファイルを一部書き換え（grep 置換した）</li>
-<li>Syntax highlighting を <code>highlight.pack.js</code> で対応</li>
-<li>GitHub Pages でホスティング（<code>docs</code> ディレクトリ使ってみることにした）</li>
-<li>かゆいところをなおす作業（一番辛かった）</li>
-<li>完成！！やったー</li>
-</ol>
-
-</section>
-
-<p><section id="p2">
-  <h2 id="github-pages-でホスティング">GitHub Pages でホスティング</h2>
-
-<p>以前は、プロジェクトに対して、 <code>gh-pages</code> ブランチのコンテンツが使われるというやつでホスティングしていましたが、<code>master</code> 配下の <code>docs</code> ディレクトリがホスティングされるやつに変えました。</p>
-
-<p><code>log.chocolateboard.net</code> と書いた <em>CNAME</em> ファイルが <code>docs</code> ディレクトリに含まれるようにして、<code>master branch /docs folder</code> を選択。</p>
-
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2017/01/hugo-2017/01.png" alt="Hugo: GitHub Pages">
-  
-</figure>
-
-<p>DNS の設定は以前いじってあったので、すぐ反映されました ^^</p>
-
-<p class="notes">CIツール使って <code>gh-pages</code> ブランチにデプロイするようにしようか迷ったけど、めんどくさくなってやめました。</p>
-
-</section></p>
-
-<section id="p3">
-  <h2 id="感想">感想</h2>
-
-<p>Middleman 環境でビルドするようにしてたものを全部 <code>gulp</code> ビルドに移行するのが、ものすごくだるかった。
-<code>{{ . }}</code> ← こういうドットの書き方慣れなくて、書いてる途中でゲシュタルト崩壊して息切れした。これ見づらくないのかな？</p>
-
-<p>何より Slim と別れるのがすごく辛かった(´；ω；｀) またお付き合いしたい。</p>
-
-<p>いろいろ面倒で、途中でやめたくなったけど、移行完了した結果&hellip;ビルド速すぎて感動した！！！！！すごい速いのでもうすべての辛さが消えました。</p>
-
-<p>今回 <code>gulp</code> と <code>hugo</code> を1回でビルドしたいので、コマンドを <code>npm</code> にまとめたのが自分の中で一番のハイライト。<br />
-<code>gulp</code> と <code>hugo</code> の <code>watch</code> タスク混ぜたやつがうまくいってないので、強そうな人に相談しないと。。</p>
-
-<p>とにかく速いので、ほんとにおすすめです★気になる方は是非♫</p>
-
-<ul>
-<li><a href="https://github.com/urakey/log.chocolateboard">urakey/log.chocolateboard</a></li>
-</ul>
-
-<h3 id="参考にさせていただいた記事-thx-xd">参考にさせていただいた記事 thx XD</h3>
-
-<ul>
-<li><a href="http://re-dzine.net/2015/01/hugo/">MiddlemanからHugoへ移行した</a></li>
-<li><a href="http://deeeet.com/writing/2014/12/25/hugo/">OctopressからHugoへ移行したと</a></li>
-<li><a href="https://t32k.me/mol/log/hugo/">JekyllからHugoへ</a></li>
-<li><a href="https://blog.mismithportfolio.com/web/20160207hugomyblog">【Hugo】ゴリラでも分かる静的サイトジェネレーターHugoでオリジナルテーマ作り</a></li>
-</ul>
-
-</section>
-
-<p><section id="p4">
-  <h2 id="積み残しタスク">積み残しタスク</h2>
-
-<ul>
-<li>画像軽量化タスクが重いので、元画像をとっておくのをやめよう</li>
-<li><code>watch</code> タスクどうにかする</li>
-</ul>
-
-</section></p>
-]]></description>
+      <guid>https://log.chocolateboard.net/2017/</guid>
+      <description><![CDATA[]]></description>
     </item>
   
     <item>
-      <title>three.js をさわってみた</title>
-      <link>https://log.chocolateboard.net/three-js-particles/</link>
+      <title>2016s</title>
+      <link>https://log.chocolateboard.net/2016/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/three-js-particles/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2016/11/three-js-particles/eyecatch.png" alt="" itemprop="image"></figure><p><a href="https://threejs.org/">three.js</a> をさわってみた。<br />
-ドキュメントを読みながらパーティクルをつくった。
-3D のことも WebGL のこともちゃんと理解できてないのでちゃんと勉強したい。</p>
-
-<hr />
-
-<cite>
-</cite>
-<p data-height="400" data-theme-id="7235" data-slug-hash="JboPwZ" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-]]></description>
+      <guid>https://log.chocolateboard.net/2016/</guid>
+      <description><![CDATA[]]></description>
     </item>
   
     <item>
-      <title>git: Git LFS を使ってみた</title>
-      <link>https://log.chocolateboard.net/git-lfs/</link>
-      <pubDate>Thu, 03 Nov 2016 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/git-lfs/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2016/11/git-lfs/eyecatch.png" alt="" itemprop="image"></figure>
-
-<p>デザインデータを Git 管理するために <em>Git Large File Storage</em> を試してみた。<br />
-これで1ファイルあたり 100MB 超えても <code>push</code> できる。</p>
-
-<p>GUI を使うデザイナーはどうなるんだろう？？て部分が心配だったけど、対応してるぽかった。</p>
-
-<ul>
-<li><a href="https://github.com/blog/2079-managing-large-files-with-git-lfs">Managing large files with Git LFS</a></li>
-<li><a href="http://japan.blogs.atlassian.com/2016/02/sourcetree-update-atlassian-account-git-lfs-support-ui-refresh-and-more/">新しくなった SourceTree: アトラシアン アカウント、Git LFS サポート、新 UI など</a></li>
-</ul>
-
-<hr />
-
-<h2 id="index">Index</h2>
-
-<ul>
-<li><a href="#p1">使い方</a></li>
-<li><a href="#p2">リモートリポジトリとのやりとり</a></li>
-<li><a href="#p3">GUI のこと</a></li>
-</ul>
-
-<hr />
-
-<section id="p1">
-  <h2 id="使い方">使い方</h2>
-
-<h3 id="インストール">インストール</h3>
-
-<p>Homebrew を使っているので <code>brew install</code> する。<br />
-<a href="https://git-lfs.github.com/">公式サイト</a>にインストーラもある。</p>
-
-<pre><code class="language-bash">$ brew install git-lfs
-</code></pre>
-
-<h3 id="git-lfsで管理するファイルタイプの追加">Git LFSで管理するファイルタイプの追加</h3>
-
-<p>Git LFS で管理したいファイルタイプを必要に応じて追加していく。<br />
-以下で Sketch を track するようになる。</p>
-
-<pre><code class="language-bash">$ git lfs track　&quot;*.sketch&quot;
-Tracking *.sketch
-</code></pre>
-
-<h3 id="git-lfsで管理しているファイルタイプの確認">Git LFSで管理しているファイルタイプの確認</h3>
-
-<p>追加したファイルタイプは <code>.gitattributes</code> というファイルに追加されている。<br />
-このファイルを直接編集してもよい。<br />
-追加されているファイルタイプを確認するコマンドは以下。</p>
-
-<pre><code class="language-bash">$ git lfs track
-Listing tracked paths
-  *.sketch (.gitattributes)
-  *.psd (.gitattributes)
-  *.ai (.gitattributes)
-</code></pre>
-
-<h3 id="管理下のファイルを確認">管理下のファイルを確認</h3>
-
-<p>コミットした時点からトラッキング対象になる。<br />
-コミット後に以下のコマンドで対象のファイルを確認することが出来る。</p>
-
-<pre><code class="language-bash">$ git lfs ls-files
-</code></pre>
-
-</section>
-
-<p><section id="p2">
-  <h2 id="リモートリポジトリとのやりとり">リモートリポジトリとのやりとり</h2>
-
-<p>とりあえず <code>push</code> してみると、普通にできる。</p>
-
-<pre><code class="language-bash">$ git push origin master
-Git LFS: (0 of 1 files) 85.07 B / 165.80 KB
-</code></pre>
-
-<p><code>pull</code> も普通にできる。ファイルの中身がテキストファイルのポインタになっているので、一瞬で終わる。
-ファイルの実態を <code>pull</code> するには以下を実行。</p>
-
-<pre><code class="language-bash">$ git lfs pull
-</code></pre>
-
-<p>とりあえずここまで確認できた。</p>
-
-</section></p>
-
-<section id="p3">
-  <h2 id="gui-のこと">GUI のこと</h2>
-
-<p><a href="https://desktop.github.com/">GitHub Desktop</a> で試してみた。<br />
-アプリをインストールして、設定からコマンドラインをインストールする。
-<p class="notes">きれいな mac を持ってるデザイナーに協力してもらった★</p></p>
-
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2016/11/git-lfs/01.png" alt="Git LFS" width="400">
-  
-</figure>
-
-<p>あとは普通に使えるっぽい。
-<code>pull</code> すると、Git LFS 対象ファイルにはダウンロードボタンが表示されるみたい。</p>
-
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2016/11/git-lfs/02.png" alt="Git LFS" width="418">
-  
-</figure>
-
-<p>このボタンを押すと、実態ファイルがダウンロードされる。意外とあっさり使えた。<br />
-GUI でも大丈夫ってことがわかった。（SourceTree は試してない）</p>
-
-</section>
-
-<p>とりあえずしばらく使ってみよう(๑•̀ㅂ•́)و✧</p>
-]]></description>
-    </item>
-  
-    <item>
-      <title>zsh: oh-my-zsh の wedisagree というテーマを使うことにした</title>
-      <link>https://log.chocolateboard.net/oh-my-zsh-wedisagree/</link>
-      <pubDate>Sun, 06 Mar 2016 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/oh-my-zsh-wedisagree/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2016/03/oh-my-zsh-wedisagree/eyecatch.png" alt="" itemprop="image"></figure><p>zsh を使うようになったので <a href="http://ohmyz.sh/">oh-my-zsh</a> というものを入れてみました。
-あっとゆう間になんかリッチな感じになったので、とりあえずこのまま使ってみることに。</p>
-
-<p>zsh に Theme があるようなので、いろいろ迷った結果「wedisagree」を使うことにしました。
-git のステータスがお天気マークで表示されるのがかわいいから:D</p>
-
-<p class="notes">ちょっとだけテーマに手を加えて好みの感じにして使ってます。</p>
-
-<p>お天気マークの意味については下記記事を参考にさせてもらいました。</p>
-
-<ul>
-<li><a href="https://www.eisbahn.jp/yoichiro/2013/01/oh-my-zsh-wedisagree-git.html">oh-my-zshのテーマでwedisagreeを選んだ時のgitステータスのマークの意味</a></li>
-<li><a href="http://qiita.com/maangie/items/2ac2e26a39a0d2d9cc79">Quick Reference for Git Mark of oh-my-zsh &lsquo;wedisagree&rsquo; Theme</a></li>
-</ul>
-
-<p>いまのとこ気に入ってる。</p>
-
-<p>キャプチャで使用しているカラースキームについては<a href="/itermcolors/">こちら</a>。</p>
-]]></description>
-    </item>
-  
-    <item>
-      <title>iTerm2: iTerm のカラースキームを作った</title>
-      <link>https://log.chocolateboard.net/itermcolors/</link>
-      <pubDate>Sat, 05 Mar 2016 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/itermcolors/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2016/03/itermcolors/eyecatch.png" alt="" itemprop="image"></figure><p>iTerm2 のカラースキームをつくりました。可愛い感じにしました。
-ちょっとまぶしい気もする&hellip;しばらく使ってみつつ調整しようと思います。</p>
-
-<p>GitHub に置いてありますので気に入っていただけた方はご自由にどうぞ ;D</p>
-
-<ul>
-<li><a href="https://github.com/urakey/akpalet.itermcolors">urakey/akpalet.itermcolors</a></li>
-</ul>
-]]></description>
-    </item>
-  
-    <item>
-      <title>Sketch: 自動保存を無効にする</title>
-      <link>https://log.chocolateboard.net/sketch-auto-save/</link>
-      <pubDate>Tue, 23 Feb 2016 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/sketch-auto-save/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2016/02/sketch-auto-save/eyecatch.png" alt="" itemprop="image"></figure><p>ここ最近ずっと悩んでいたこと -&gt;「起動ディスクが一杯です」。</p>
-
-<p>原因を調べると、だいたい Sketch.app の Auto-Save 機能によるデータが圧迫していることが多い(´・ω・`)</p>
-
-<p>Sketch はドキュメントの自動的と保存と履歴の保存してくれるので、うっかりやらかしても限りなく理想に近い状態で救出できるところは気にいっていたのですが、「起動ディスクが一杯です」のストレスが辛いので、自動保存を無効にすることにしました。</p>
-
-<p>Sketch &gt; Preferences &gt; General で設定。</p>
-
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2016/02/sketch-auto-save/01.png" alt="Sketch setting">
-  
-</figure>
-
-
-<p>変更履歴は Git で管理することにしています。</p>
-
-<p>快適(๑•̀ㅂ•́)و✧</p>
-]]></description>
-    </item>
-  
-    <item>
-      <title>zsh: Ctrl-R とか Ctrl-A とか Ctrl-E とかが効かなくなった</title>
-      <link>https://log.chocolateboard.net/sh-bindkey/</link>
-      <pubDate>Thu, 11 Feb 2016 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/sh-bindkey/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2016/02/zsh-bindkey/eyecatch.png" alt="" itemprop="image"></figure><p>普段 Ctrl-R とかを多用しているので、突然効かなくなってものすごく焦った。</p>
-
-<p>そういえば <code>.zshrc</code> 編集したんだった！と思い至ったけれど、どの設定が悪いのかよくわからなくて涙目。
-心当たりがあるのは <code>bindkey -v</code> て記述足したことくらいだったので、そこのとこ調べてみた。</p>
-
-<p>結果原因は <code>bindkey</code> でした。。</p>
-
-<pre><code class="language-zsh">bindkey -e
-</code></pre>
-
-<p>Emacs 風キーバインドだっていう認識のないまま使っていたから <code>bindkey -v</code> て軽い気持ちで追記したのがいけなかった。反省。</p>
-]]></description>
-    </item>
-  
-    <item>
-      <title>Middleman に移行して Feed の URL を変更しました</title>
-      <link>https://log.chocolateboard.net/middleman-feed-url/</link>
+      <title>2015s</title>
+      <link>https://log.chocolateboard.net/2015/</link>
       <pubDate>Tue, 17 Mar 2015 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/middleman-feed-url/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2015/03/middleman-feed-url/eyecatch.png" alt="" itemprop="image"></figure>
-
-<p>Middleman 引っ越し done !! なのだけど、Feed の URL が WordPress の時と変わってしまった。
-<code>http://chocolateboard.net/feed/</code> だったものが <code>http://chocolateboard.net/feed.rss</code> に、
-<code>http://chocolateboard.net/feed/atom/</code> だったものが <code>http://chocolateboard.net/feed.atom</code> なっています。</p>
-
-<p>GitHub Pages 上で、WordPress のときと同じスラッシュ終わりの URL にする方法がわからず（あるのかな？）URL 変更することに。</p>
-
-<p class="notes">Middleman 拡張すればできるかも？？わかんないけど！<a href="https://twitter.com/wakuworks">にのくん</a> ありがとう★</p>
-
-<p>GitHub Pages では、拡張子なしの feed は <code>application/octet-stream</code> で配信されるみたい。
-拡張子なしも試してみましたが、元の URL と同じにできないのだから、
-いっそ <code>feed.rss</code> とか <code>feed.atom</code> とかにして適切な Content-Type が返るようにしようかな。。って思って変えてみました。</p>
-
-<p>ずっと GitHub Pages に置いておくかわからないのと、将来的に拡張子でぶれそうな気もしてもやもやしていましたが、これでいきます。</p>
-
-<p>登録してくださっているかたは、お手数ですが再登録おねがいします mm</p>
-
-<h2 id="参考にさせていただいた記事-thx-xd">参考にさせていただいた記事 thx XD</h2>
-
-<ul>
-<li><a href="http://hail2u.net/blog/internet/github-pages-and-content-type-header.html">GitHub PagesとContent-Typeヘッダー</a></li>
-<li><a href="http://hail2u.net/blog/internet/publishing-feed-via-pubsubhubbbub-using-github-webhooks.html">ruby Middleman GitHubのwebhooks経由でのPubSubHubbubによるフィードの更新通知</a></li>
-</ul>
-]]></description>
+      <guid>https://log.chocolateboard.net/2015/</guid>
+      <description><![CDATA[]]></description>
     </item>
   
     <item>
-      <title>WordPress から Middleman に移行しました</title>
-      <link>https://log.chocolateboard.net/middleman-blog-2015/</link>
-      <pubDate>Sat, 14 Mar 2015 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/middleman-blog-2015/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2015/03/middleman-blog-2015/eyecatch.png" alt="" itemprop="image"></figure>
-
-<p>年末に移行作業に手をつけて放置していたものを、やっと終わらせました。
-移行したいと思ったきっかけは <code>$ middleman deploy</code> で公開！みたいなことがしたかったから。
-なんかかっこいいし ^^ （動機不純）</p>
-
-<p class="notes"><em>Slim</em> というテンプレートエンジンの予習がしたかったという真面目な理由もあります。</p>
-
-<p>途中、別件に心奪われて放置してましたが、やりかけ気持ち悪いので先週末に集中して終わらせました。
-ついでにデザインをマイナーアップデートした！あんま変わってないけど。。。</p>
-
-<p>何をしたかをざっとメモとして残します。</p>
-
-<hr />
-
-<h2 id="index">Index</h2>
-
-<ul>
-<li><a href="#p1">移行手順メモ</a></li>
-<li><a href="#p2">インストールしたプラグイン</a></li>
-<li><a href="#p3">テンプレートエンジン</a></li>
-<li><a href="#p4">GitHub Pages でホスティング</a></li>
-<li><a href="#p5">積み残しタスク</a></li>
-</ul>
-
-<hr />
-
-<section id="p1">
-  <h2 id="移行手順メモ">移行手順メモ</h2>
-
-<ol>
-<li>Middleman をインストールして、ブログ機能に必要な環境をググって整えた</li>
-<li>WordPress のテーマに使っていた Sass とか JS とか画像とかを Middleman 環境にコピー</li>
-<li>Grunt でビルドしていたものを、Middleman 環境でビルドするように変更</li>
-<li>Slim テンプレートエンジンでテーマをコーディング</li>
-<li>WordPress に投稿済みの画像を Middleman 環境にコピー</li>
-<li>WordPress に投稿済みの記事を Middleman 環境にコピー（Markdown で下書きしていたものがあるので、それをほぼそのまま移行できた）</li>
-<li>GitHub Pages でホスティングする準備とテスト</li>
-<li>イメチェン（デザインのマイナーアップデート）</li>
-<li>かゆいところをなおす作業（無知ゆえ一番辛かった工程）</li>
-<li>完成！！やったー</li>
-</ol>
-
-</section>
-
-<section id="p2">
-  <h2 id="middleman-にインストールしたプラグイン">Middleman にインストールしたプラグイン</h2>
-
-<pre><code class="language-ruby"># If you have OpenSSL installed, we recommend updating
-# the following line to use &quot;https&quot;
-source 'http://rubygems.org'
-
-gem 'middleman'
-gem 'middleman-blog'
-gem 'middleman-livereload'
-gem 'middleman-rouge'
-gem 'middleman-deploy'
-gem 'middleman-blog-similar'
-gem 'middleman-minify-html'
-gem 'middleman-imageoptim'
-gem 'slim'
-gem 'nokogiri'
-gem 'redcarpet'
-
-# For feed.xml.builder
-gem 'builder', '~&gt; 3.0'
-</code></pre>
-
-<h3 id="middleman-blog">middleman-blog</h3>
-
-<p>Middlemanにブログ機能を追加するプラグインです。</p>
-
-<ul>
-<li><a href="https://github.com/middleman/middleman-blog">middleman/middleman-blog</a></li>
-<li><a href="https://middlemanapp.com/jp/basics/blogging/">Middleman: ブログ機能</a></li>
-</ul>
-
-<p>WordPress の時と URL が変わらないよう、最初は思い通りの URL を作ることから始めました。
-<code>$ middleman server</code> で内蔵のサーバが動くので、実際に動かして設定していくとわかりやすかった。</p>
-
-<h4 id="config-rb">config.rb</h4>
-
-<pre><code class="language-ruby">activate :blog do |blog|
-  blog.layout = 'layouts/layout'
-  blog.tag_template = 'tag.html'
-  blog.calendar_template = 'calendar.html'
-
-  blog.sources    = 'entries/{year}/{month}/{title}.html'
-  blog.permalink  = '{title}/index.html'
-  blog.taglink    = 'tag/{tag}/index.html'
-  blog.year_link  = '{year}/index.html'
-  blog.month_link = '{year}/{month}/index.html'
-  blog.day_link   = '{year}/{month}/{day}/index.html'
-
-  # Enable pagination
-  blog.paginate = true
-  blog.per_page = 10
-  blog.page_link = 'page/{num}'
-
-  blog.custom_collections = {
-    categories: {
-      link: '/{category}/index.html',
-      template: '/category.html'
-    }
-  }
-end
-
-# Feed 生成
-page &quot;/feed.xml&quot;, layout: false
-
-# Sitemap 生成
-page &quot;/sitemap.xml&quot;, layout: false
-
-# ディレクトリインデックス
-activate :directory_indexes
-</code></pre>
-
-<p>WordPress の時に持っていた「カテゴリー」という概念は引き継ぐことにしました。 <code>blog.custom_collections</code> のところで設定しています。</p>
-
-<h3 id="middleman-livereload">middleman-livereload</h3>
-
-<p>Middleman server を立ち上げてソースファイルに変更を加えるとブラウザが自動でリロードされます。</p>
-
-<ul>
-<li><a href="https://github.com/middleman/middleman-livereload">middleman/middleman-livereload</a></li>
-</ul>
-
-<h3 id="middleman-deploy">middleman-deploy</h3>
-
-<p>デプロイ作業を簡略化できる。</p>
-
-<ul>
-<li><a href="https://github.com/middleman-contrib/middleman-deploy">middleman-contrib/middleman-deploy)</a></li>
-</ul>
-
-<h3 id="middleman-rouge">middleman-rouge</h3>
-
-<p>シンタックスハイライト。</p>
-
-<ul>
-<li><a href="https://github.com/Linuus/middleman-rouge">Linuus/middleman-rouge</a></li>
-</ul>
-
-<h3 id="middleman-blog-similar">middleman-blog-similar</h3>
-
-<p>類似記事を表示するプラグイン。設定周りはまだ試してません。とりあえずいれているだけ。</p>
-
-<ul>
-<li><a href="https://github.com/ngs/middleman-blog-similar">ngs/middleman-blog-similar</a></li>
-</ul>
-
-<h3 id="middleman-minify-html">middleman-minify-html</h3>
-
-<p>HTML を Minify するプラグイン。</p>
-
-<ul>
-<li><a href="https://github.com/middleman/middleman-minify-html">middleman/middleman-minify-html</a></li>
-<li><a href="https://middlemanapp.com/jp/advanced/file_size_optimization/">ファイルサイズ最適化</a></li>
-</ul>
-
-<h3 id="middleman-imageoptim">middleman-imageoptim</h3>
-
-<p>画像圧縮。 <code>/build</code> 配下に最適化された画像が生成されます。</p>
-
-<ul>
-<li><a href="https://github.com/plasticine/middleman-imageoptim">plasticine/middleman-imageoptim</a></li>
-<li><a href="https://middlemanapp.com/jp/advanced/file_size_optimization/">ファイルサイズ最適化</a></li>
-</ul>
-
-</section>
-
-<p><section id="p3">
-  <h2 id="テンプレートエンジン">テンプレートエンジン</h2>
-
-<h3 id="html-のテンプレートエンジン">HTML のテンプレートエンジン</h3>
-
-<p>HTML 生成用のテンプレートエンジンは Slim を採用しました。<code>&lt;% %&gt;</code> とか書かなくて良くてすっきり ;D</p>
-
-<ul>
-<li><a href="https://middlemanapp.com/jp/basics/template_engine_options/">テンプレートエンジンオプション</a></li>
-</ul>
-
-<pre><code class="language-ruby"># Slim
-set :slim, :format =&gt; :html5, :sort_attrs =&gt; false, :pretty =&gt; true
-</code></pre>
-
-<h3 id="markdown-のテンプレートエンジン">Markdown のテンプレートエンジン</h3>
-
-<p>投稿記事は Markdown で書くことにしました。</p>
-
-<p>Markdown エンジンは、デフォルトの <em>Kramdown</em> から <em>Redcarpet</em> に変更しました。</p>
-
-<p><em>Redcarpet</em> に変更して困ったことが、Markdown の中に書いた生の HTML がブロック要素の場合、HTML タグで囲われた Markdown 部分は Markdown として認識されません。
-<em>Kramdown</em> なら Markdown として認識してくれるのに。。</p>
-
-<p>いろいろ調べてみたら、ブロック要素で囲われた Markdown 部分が Markdown として認識されないのは仕様として正しいみたい。（無知でした）</p>
-
-<p>寝かせて考えた結果、生の HTML を書きたいケースは限定されているので、カスタムレンダラを追加して対応しました。</p>
-
-<h3 id="参考にさせていただいた記事-thx-xd">参考にさせていただいた記事 thx XD</h3>
-
-<ul>
-<li><a href="http://k0kubun.hatenablog.com/entry/2013/09/19/223400">Railsでカスタムmarkdownを実装する</a></li>
-<li><a href="http://jumble-note.blogspot.jp/2014/06/rubymiddleman.html">ruby Middleman カスタムなレンダラ</a></li>
-</ul>
-
-</section></p>
-
-<p><section id="p4">
-  <h2 id="github-pages-でホスティング">GitHub Pages でホスティング</h2>
-
-<p>ユーザーに紐づくサイトと、プロジェクトに対するサイトのパターンがあるらしい。。。
-前者は <code>username/username.github.io</code> というルールに則ってリポジトリを作る必要があるみたい。</p>
-
-<p>今回は後者にしてみました！（なんとなく）</p>
-
-<p>プロジェクトに対するサイトにした場合は、 <code>gh-pages</code> ブランチのコンテンツが使われるとのことなので、<code>$ middleman-deploy</code> したら、<code>gh-pages</code> ブランチに <code>push</code> されるようにしました。</p>
-
-<pre><code class="language-ruby">activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.branch = 'gh-pages'
-end
-</code></pre>
-
-<p><code>log.chocolateboard.net</code> と書いた <em>CNAME</em> ファイルが <code>gh-pages</code> に含まれるようにして準備完了。
-DNS の設定をいじってしばらく待ったら反映されました ^^</p>
-
-<h3 id="参考にさせていただいた記事-thx-xd">参考にさせていただいた記事 thx XD</h3>
-
-<ul>
-<li><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/">Setting up a custom domain with GitHub Pages</a></li>
-<li><a href="https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/">Tips for configuring a CNAME record with your DNS provider</a></li>
-<li><a href="http://blog.coiney.com/2013/06/21/host-middleman-blog-on-github/">middleman-blogをgithubでホストする</a></li>
-</ul>
-
-</section></p>
-
-<p><section id="p5">
-  <h2 id="積み残しタスク">積み残しタスク</h2>
-
-<ul>
-<li>検索窓つけようかな</li>
-<li>サイドバーが長すぎるのでタグのデザイン変えよう</li>
-<li>Feed の URL 変わってしまったのどうにかできないか調査する</li>
-</ul>
-
-</section></p>
-
-<hr />
-
-<p>夢の <code>deploy</code> できるようになりました XD</p>
-]]></description>
-    </item>
-  
-    <item>
-      <title>Xcode: プラグインマネージャ「Alcatraz」を入れてみた</title>
-      <link>https://log.chocolateboard.net/xcode-alcatraz/</link>
-      <pubDate>Wed, 11 Feb 2015 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/xcode-alcatraz/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2015/02/xcode-alcatraz/eyecatch.png" alt="" itemprop="image"></figure><p>Xcode のエディタを黒くしよう！って思ってググったらプラグインマネージャ「<a href="http://alcatraz.io/">Alcatraz</a>」なるものをみつけた。とりあえずカタチから入る。</p>
-
-<p>ターミナルで下記実行して、Xcode を再起動するとメニューの <em>Window</em> に <em>Package Manager</em> が追加される。</p>
-
-<pre><code class="language-shell">curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
-</code></pre>
-
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2015/02/xcode-alcatraz/01.png" alt="Xcode: Alcatraz">
-  
-</figure>
-
-
-<p><em>Color Themes</em> から好きなの選んで <em>INSTALL</em> ボタンを押す。</p>
-
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2015/02/xcode-alcatraz/02.png" alt="Xcode: Alcatraz">
-  
-</figure>
-
-
-<p>Xcode の設定にカラースキームが追加されてる！</p>
-
-<p>便利そうなプラグインはちゃんと使うようになってから追加するつもり :D</p>
-]]></description>
-    </item>
-  
-    <item>
-      <title>JavaScript: Flickr API を使って写真を取得・表示する jQuery プラグイン</title>
-      <link>https://log.chocolateboard.net/jquery-akflickr/</link>
+      <title>2014s</title>
+      <link>https://log.chocolateboard.net/2014/</link>
       <pubDate>Sun, 30 Nov 2014 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/jquery-akflickr/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akflickr/eyecatch.jpg" alt="" itemprop="image"></figure>
-
-<p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その4です（目標達成まであと6つ）。</p>
-
-<hr />
+      <guid>https://log.chocolateboard.net/2014/</guid>
+      <description><![CDATA[]]></description>
+    </item>
+  
+    <item>
+      <title>2013s</title>
+      <link>https://log.chocolateboard.net/2013/</link>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 UTC</pubDate>
+      <author>Aki Fukayama</author>
+      <guid>https://log.chocolateboard.net/2013/</guid>
+      <description><![CDATA[]]></description>
+    </item>
+  
+    <item>
+      <title>About</title>
+      <link>https://log.chocolateboard.net/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>Aki Fukayama</author>
+      <guid>https://log.chocolateboard.net/about/</guid>
+      <description><![CDATA[
 
 <h2 id="index">Index</h2>
 
 <ul>
-<li><a href="#p1">jquery.akFlickr の Demo</a></li>
-<li><a href="#p2">jquery.akFlickr のこと</a></li>
-<li><a href="#p3">jquery.akFlickr の Options</a></li>
+<li><a href="#profile">Self introduction.</a></li>
+<li><a href="#website">About this website.</a></li>
+<li><a href="#recipe">Website recipe.</a></li>
 </ul>
 
 <hr />
 
-<section id="p1">
-  <h2 id="jquery-akflickr-の-demo">jquery.akFlickr の Demo</h2>
-
-<p><cite></p>
-
-<p></cite>
-<p data-height="400" data-theme-id="7235" data-slug-hash="jEOXYM" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
-
-<section id="p2">
-  <h2 id="jquery-akflickr-のこと">jquery.akFlickr のこと</h2>
-
-<h3 id="リポジトリ">リポジトリ</h3>
-
-<ul>
-<li><a href="https://github.com/urakey/jquery.akFlickr">urakey/jquery.akFlickr</a></li>
-</ul>
-
-<p>指定したセレクタ内に Flickr の写真を検索して表示するプラグインです。</p>
-
-<h3 id="flickr-api-key-を取得する">Flickr API Key を取得する</h3>
-
-<h4 id="1-the-app-garden-からアプリケーションを作成">1. The App Garden からアプリケーションを作成</h4>
-
-<ul>
-<li><a href="https://www.flickr.com/services/apps/create/">The App Garden</a></li>
-</ul>
-
-<p>普段使用している Flickr アカウントでログインしてください。</p>
-
-<p>上記 URL にアクセス後、［Get your API Key］の［Request an API Key］から取得画面へ進みます。</p>
-
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akflickr/01.png" alt="JavaScript: Flickr">
+<section id="profile">
   
-</figure>
+## Self introduction.
 
-<h4 id="2-商用-非商用を選択">2. 商用 / 非商用を選択</h4>
+[自己紹介はここにまとめました → [ About :: chocolateboard. ]](
+  https://chocolateboard.net
+/about/#profile)
 
-<p>非商用利用の場合は［APPLY FOR A NON-COMMERCIAL KEY］を選択します。商用利用の場合は［APPLY FOR A COMMERCIAL KEY］を選択します。その場合審査が必要なようです。</p>
+## About this website.
 
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akflickr/02.png" alt="JavaScript: Flickr">
-  
-</figure>
+*chocolateboard* という名前に深い意味はありません。  
+ドメイン取得時に所持していたスケートボードの板が [Chocolate Skateboards](http://www.chocolateskateboards.com/) のものだったこと、チョコレートが好きなこと、デッキとチョコレートで板チョコっぽいなと思ったことなどから過去に取得したドメインです。
 
-<h4 id="3-アプリケーションの登録">3. アプリケーションの登録</h4>
+*log.chocolateboard* のコンテンツは Hugo で更新しています。
 
-<p>アプリケーションの名前と説明を入力し、規約に同意して［ SUBMIT ］ボタンをクリックすれば取得完了です。</p>
+Chrome・Safari・Firefox・Opera 最新版でのみ意図した表示となっています。  
+IE8 以下は対応する予定がありません。
 
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akflickr/03.png" alt="JavaScript: Flickr">
-  
-</figure>
+実験したりなどもしておりますので、画面が真っ白になっているときは大体なにかに失敗している時です mm  
+ご了承くださいませ。
 
-<p>アプリケーション名や、説明は適当で大丈夫です。あとで編集できます。</p>
-
-<h3 id="プラグインの使い方">プラグインの使い方</h3>
-
-<p>Flickr API Key と <code>user_id</code> <code>text</code> <code>tags</code> の 3 のうち最低 1 つの検索条件を指定してください。</p>
-
-<h4 id="特定のユーザーの写真を取得する">特定のユーザーの写真を取得する</h4>
-
-<p>特定のユーザーの写真を検索したい場合には、<code>searchOptions.user_id</code> にユーザー ID を指定します。（こういうやつ → 00000000@N00）</p>
-
-<pre><code class="language-javascript">$('#flickrPhotos').akFlickr({
-  api_key: YOUR_API_KEY,
-  searchOptions: {
-    user_id : '00000000@N00'
-  }
-});
-</code></pre>
-
-<p>プロフィール用の画像名を調べるとわかります。<a href="http://idgettr.com/">idgettr</a> という便利なサービスもあります ;D</p>
-
-<h4 id="フリーワードで検索した写真を取得する">フリーワードで検索した写真を取得する</h4>
-
-<p>フリーワードで全文検索したい場合は <code>searchOptions.text</code> にキーワードを指定します。</p>
-
-<pre><code class="language-javascript">$('#flickrPhotos').akFlickr({
-  api_key: YOUR_API_KEY,
-  searchOptions: {
-    text : 'kawaii'
-  }
-});
-</code></pre>
-
-<h4 id="タグで絞り込んだ写真を取得する">タグで絞り込んだ写真を取得する</h4>
-
-<p>タグで絞り込みたい場合は <code>searchOptions.tags</code> にタグを指定します。複数指定はカンマ区切りで。</p>
-
-<pre><code class="language-javascript">$('#flickrPhotos').akFlickr({
-  api_key: YOUR_API_KEY,
-  searchOptions: {
-    tags : 'cake,square'
-  }
-});
-</code></pre>
+[プライバシーポリシーについてはこちら](/privacy/)
 
 </section>
 
-<section id="p3">
-  <h2 id="jquery-akflickr-の-options">jquery.akFlickr の Options</h2>
+<section id="recipe">
+  
+## Website recipe.
 
-<p>オプションは <a href="https://github.com/urakey/jquery.akFlickr/blob/master/README.md#options">ここ</a> にまとまっています。</p>
+### Design
 
-</section>
+Sass のグローバルな変数として、キーカラー1色とダークカラー1色を持っています。  
+タブレットやスマートフォンの対応はメディアクエリで対応しているのみです。  
+主にカラム幅の変更・組み換え・表示非表示切り替えのみ。
 
-<hr />
+アイコンは *Font Awesome* のものです。
 
-<p>Flickr の API はいろんなのが用意されているのでなんか作れそう。</p>
+- [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+- [Google Web Fonts: PT Sans](https://www.google.com/fonts/specimen/PT+Sans)
 
-<p>このプラグインは <code>flickr.photo.search</code> のみ使用して、シンプルな検索・取得・表示に絞って作ってみました。それも全部使い切ったわけでないです。。</p>
+### Coding
 
-<p>jQuery のプラグイン化してみるお勉強の記録残り6個。。。何にしよお。</p>
+CSS は Sass の SCSS 記法を採用しています。
 
-<hr />
-
-<p>↓参考にさせていただいた記事など</p>
-
-<ul>
-<li><a href="https://www.flickr.com/services/api/flickr.photos.search.html">Flickr Services: Flickr API: flickr.photos.search</a></li>
-<li><a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20061101/252356/">第2回　JavaScriptからFlickr APIで画像検索</a></li>
-<li><a href="http://t-kashima.hateblo.jp/entry/2012/01/16/021131">node.jsでFlickr API - 夜から朝にかけて</a></li>
-</ul>
+- [GitHub](https://github.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Hugo](https://gohugo.io/)
+- [gulp.js](http://gulpjs.com/)
+- [Atom](https://atom.io/)
 
 </section>
 ]]></description>
     </item>
   
     <item>
-      <title>JavaScript: Instagram API を使って自分の写真を取得・表示する jQuery プラグイン</title>
-      <link>https://log.chocolateboard.net/jquery-akinstagram/</link>
-      <pubDate>Fri, 14 Nov 2014 00:00:00 UTC</pubDate>
+      <title>Privacy</title>
+      <link>https://log.chocolateboard.net/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/jquery-akinstagram/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akinstagram/eyecatch.png" alt="" itemprop="image"></figure>
-
-<p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その3です（目標達成まであと7つ）。</p>
-
-<hr />
+      <guid>https://log.chocolateboard.net/privacy/</guid>
+      <description><![CDATA[
 
 <h2 id="index">Index</h2>
 
 <ul>
-<li><a href="#p1">jquery.akInstagram の Demo</a></li>
-<li><a href="#p2">jquery.akInstagram のこと</a></li>
-<li><a href="#p3">jquery.akInstagram の Options</a></li>
+<li><a href="#p1">個人情報保護の基本方針</a></li>
+<li><a href="#p2">掲載されている広告について</a></li>
+<li><a href="#p3">アクセス解析ツールについて</a></li>
 </ul>
 
 <hr />
 
 <section id="p1">
-  <h2 id="jquery-akinstagram-の-demo">jquery.akInstagram の Demo</h2>
+  
+## 個人情報保護の基本方針
 
-<p><cite></p>
+1. 個人情報の利用目的をできるだけ特定し、特定された利用目的の達成に必要な範囲を超えて利用することはありません。
+1. 個人情報を偽りその他不正な手段による取得しません。取得したときは、本人に速やかに利用目的を通知又は公表します。
+1. 個人情報を利用目的の範囲内で正確かつ最新の内容に保つように努めます。
+1. 個人情報の漏洩や滅失を防ぐために、必要かつ適切な安全管理措置を講じます。
+1. あらかじめ本人の同意を得ないで第三者に個人情報を提供することはありません。
 
-<p></cite>
-<p data-height="400" data-theme-id="7235" data-slug-hash="GgRRqd" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+ただし、法令に基づく場合、人の生命、身体又は財産の保護に必要な場合、公衆衛生・児童の健全育成に特に必要な場合、国等に協力する場合は除きます。
+
+</section>
 
 <section id="p2">
-  <h2 id="jquery-akinstagram-のこと">jquery.akInstagram のこと</h2>
-
-<h3 id="リポジトリ">リポジトリ</h3>
-
-<ul>
-<li><a href="https://github.com/urakey/jquery.akInstagram">urakey/jquery.akInstagram</a></li>
-</ul>
-
-<p>指定したセレクタ内に自分の Instagram の写真を出力するプラグインです。</p>
-
-<h3 id="instagram-で-アクセストークンを取得する">Instagram で アクセストークンを取得する</h3>
-
-<h4 id="1-instagram-で-developer-登録をする">1. Instagram で Developer 登録をする</h4>
-
-<ul>
-<li><a href="http://instagram.com/developer/">http://instagram.com/developer/</a></li>
-</ul>
-
-<p>普段使用している Instagram アカウントでログインしてください。</p>
-
-<p>上記 URL にアクセス後、[ Register Your Application ] ボタンをクリックします。Developer 登録をしていない人はこの後 [ Developer Signup ] 画面に移動しますので、そこで開発者登録をします。</p>
-
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akinstagram/01.png" alt="JavaScript: Instagram">
   
-</figure>
+## 掲載されている広告について
 
-<h4 id="2-アプリケーションの登録">2. アプリケーションの登録</h4>
+当サイト（
+  log.chocolateboard
+）では、第三者配信の広告サービス（Google AdSense、A8.net、Amazonアソシエイト、iTunes アフィリエイトプログラム、Link Share Japan）を利用しています。
 
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akinstagram/02.png" alt="JavaScript: Instagram">
-  
-</figure>
+このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイト（
+  log.chocolateboard
+）や他サイトへのアクセスに関する情報『Cookie』を使用することがあります。
 
-<p>[ Register a New Client（新しいアプリを登録） ] ボタンをクリックし、アプリケーション登録をしていきます。ウェブ上で利用する場合は、自分のサイト情報を入力していけば良いと思います。</p>
+<p class="notes">氏名、住所、メール アドレス、電話番号は含まれません。</p>
 
-<figure>
-  <img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akinstagram/03.png" alt="JavaScript: Instagram">
-  
-</figure>
-
-<ul>
-<li>Applictaiton Name - アプリケーションの名前（適当で OK）</li>
-<li>Dscription - 説明など</li>
-<li>Website - サイトの URL</li>
-<li>OAuth redirect_uri - アクセストークンの取得時にリダイレクトされるURL（適当でも OK ぽい）</li>
-<li>Disable implicit OAuth - チェックを入れたまま</li>
-<li>Enforce signed header - チェックが入っていないまま</li>
-</ul>
-
-<p>[ OAuth redirect_uri ] は、あとで行うアクセストークンの取得時にリダイレクトされるURLになります。</p>
-
-<h4 id="3-アクセストークンの取得">3. アクセストークンの取得</h4>
-
-<p>アプリケーションを作ったので、<code>CLIENT-ID</code> と <code>REDIRECT-URI</code> を使用して下記にアクセスします。</p>
-
-<pre><code>https://instagram.com/oauth/authorize/?client_id=【CLIENT-ID】&amp;redirect_uri=【REDIRECT-URI】&amp;response_type=token`&lt;/pre&gt;
-</code></pre>
-
-<p>認証すると下記のようなURLがかえってきます。</p>
-
-<pre><code>【OAuth redirect_uri に指定したURL】#access_token=【ACCESS-TOKEN】
-</code></pre>
-
-<p>この【ACCESS-TOKEN】の部分が自身のアクセストークンになります。</p>
-
-<p>うまくいかない場合は、Disable implicit OAuth のチェックを一時的に外すとよいです。</p>
-
-<h3 id="プラグインの使い方">プラグインの使い方</h3>
-
-<p>アクセストークンを使ってデータを取得する処理はサーバサイドで行って、その URL を指定できるような仕様にしました。</p>
-
-<pre><code class="language-javascript">$('#novels').akInstagram({
-  request_url: YOUR_REQUEST_URL // データを取得する処理をしてくれるファイルの URL を指定
-});
-</code></pre>
-
-<p>サーバサイドでなんちゃらを「やりたくない」とか「できない」といった場合に、リクエスト URL の代わりにアクセストークンを指定することもできるようにしています。</p>
-
-<pre><code class="language-javascript">$('#novels').akInstagram({
-  access_token: YOUR_ACCESS_TOKEN // 自身のアクセストークンを指定
-});
-</code></pre>
-
-<p>アクセストークンを直接指定する場合は、JS ファイルに直接アクセストークンを記述することになってしまうので、他人に知られることになります。許容できる人は使ってください。</p>
-
-<p>アクセストークンが知られるリスクについて &amp; アクセストークンを使ってデータを取得する処理は下記を参考にさせていただきました ;D</p>
-
-<ul>
-<li><a href="http://syncer.jp/instagram-api-matome#content-12-1">アクセストークンが知られるリスク</a></li>
-</ul>
+また、Google AdSenseに関してこのプロセスの詳細やこのような情報が広告配信事業者に使用されないようにする方法については、『[ポリシーと原則](http://www.google.co.jp/policies/technologies/ads/)』をご確認ください。
 
 </section>
 
 <section id="p3">
-  <h2 id="jquery-akinstagram-の-options">jquery.akInstagram の Options</h2>
-
-<p>オプションは <a href="https://github.com/urakey/jquery.akInstagram/blob/master/README.md#options">ここ</a> にまとまっています。</p>
-
-</section>
-
-<hr />
-
-<p>Booklog プラグイン同様 DOM 自体自由に出せたらいいのに・・・問題、どうやって実現するかの手法は決めました。本当に必要だろうか？と考え中ですが、お勉強のため、出力時の自由度アップの仕組みをうまいことやる！つもりです。</p>
-
-</section>
-]]></description>
-    </item>
   
-    <item>
-      <title>JavaScript: ブクログの非公式 API を使って本の情報を取得・表示する jQuery プラグイン</title>
-      <link>https://log.chocolateboard.net/jquery-akbooklog/</link>
-      <pubDate>Sun, 09 Nov 2014 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/jquery-akbooklog/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-akbooklog/eyecatch.jpg" alt="" itemprop="image"></figure>
+## アクセス解析ツールについて
 
-<p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その2です（目標達成まであと8つ）。</p>
+当サイト（
+  log.chocolateboard
+）では、アクセス解析ツールとして『Google Analytics』を利用しています。
 
-<p>随分前に「<a href="http://backyard.chocolateboard.net/201204/booklog-jquery">ブクログのAPI（非公式）を使って本の情報をjQueryで取得してみた</a>」ていうのを書いたけど、今ならもう少しだけ綺麗に書けるようになった気がするので書きなおしてみました。</p>
+『Google Analytics』はトラフィックデータの収集のために『Cookie』を使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。収集を拒否するには、ブラウザの設定から『Cookie』を無効にしてください。
 
-<hr />
-
-<h2 id="index">Index</h2>
-
-<ul>
-<li><a href="#p1">jquery.akBooklog の Demo</a></li>
-<li><a href="#p2">jquery.akBooklog のこと</a></li>
-<li><a href="#p3">jquery.akBooklog の Options</a></li>
-</ul>
-
-<hr />
-
-<section id="p1">
-  <h2 id="jquery-akbooklog-の-demo">jquery.akBooklog の Demo</h2>
-
-<p><cite></p>
-
-<p></cite>
-<p data-height="400" data-theme-id="7235" data-slug-hash="gEqcL" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
-
-<section id="p2">
-  <h2 id="jquery-akbooklog-のこと">jquery.akBooklog のこと</h2>
-
-<ul>
-<li><a href="https://github.com/urakey/jquery.akBooklog">urakey/jquery.akBooklog</a></li>
-</ul>
-
-<p>非公式 API を使用しているので、使用の際は個人的な目的の範囲で &amp;&amp; 自己責任でお願いします mm</p>
-
-<p>指定したセレクタ内に本の画像とタイトルを出力するプラグインです。デフォルトではブクログ公式アカウントの本棚情報を出力します。</p>
-
-<h3 id="自分の本棚情報を表示">自分の本棚情報を表示</h3>
-
-<p>ブクログのユーザーアカウントが必要です。ユーザーアカウントを <code>booklog_id</code> にセットして渡してください。</p>
-
-<pre><code class="language-javascript">$('#novels').akBooklog({
-  booklog_id: 'urakey' // ブクログのユーザーアカウント
-});
-</code></pre>
-
-<h3 id="リンク先のこと">リンク先のこと</h3>
-
-<p>Amazonアソシエイト ID を渡すと、リンク先がブクログから Amazon に変わります。</p>
-
-<p>ただし、ブクログに登録されている本が ASIN 情報を持っていない場合はブクログのページがリンク先になります</p>
-
-<pre><code class="language-javascript">$('#novels').akBooklog({
-  amazon_id: 'hogehoge-22' // Amazonアソシエイト ID
-});
-</code></pre>
-
-</section>
-
-<section id="p3">
-  <h2 id="jquery-akbooklog-の-options">jquery.akBooklog の Options</h2>
-
-<p>オプションは <a href="https://github.com/urakey/jquery.akBooklog/blob/master/README.md#options">ここ</a> にまとまっています。</p>
-
-</section>
-
-<hr />
-
-<p>レイアウトは CSS で自由に変更できるように、プラグイン側には持たせていないけれど、そもそも DOM 自体自由に出せたらいいのに・・・と思うので、どうやったらできるのか考え中(´∀｀*)</p>
-
-</section>
-]]></description>
-    </item>
-  
-    <item>
-      <title>JavaScript: 画像の上に文字がスライドインするやつをお手軽にできる jQuery プラグイン</title>
-      <link>https://log.chocolateboard.net/jquery-aktextoverlay/</link>
-      <pubDate>Sat, 08 Nov 2014 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/jquery-aktextoverlay/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2014/11/jquery-aktextoverlay/eyecatch.jpg" alt="" itemprop="image"></figure>
-
-<p>JavaScript お勉強メモ。jQuery のプラグイン化してみるお勉強の記録その1です。目標はその10くらいまで書くこと。</p>
-
-<p>最近全く記事を書いていなかったので、目標決めてちょっとずつ書いてみることにしました。</p>
-
-<hr />
-
-<h2 id="index">Index</h2>
-
-<ul>
-<li><a href="#p1">jquery.akTextOverlay の Demo</a></li>
-<li><a href="#p2">jquery.akTextOverlay のこと</a></li>
-<li><a href="#p3">jquery.akTextOverlay の Options</a></li>
-</ul>
-
-<hr />
-
-<section id="p1">
-  <h2 id="jquery-aktextoverlay-の-demo">jquery.akTextOverlay の Demo</h2>
-
-<p><cite></p>
-
-<p></cite>
-<p data-height="540" data-theme-id="7235" data-slug-hash="dinbJ" default_tab="result" user="akey" class="codepen">See the Pen by akey (<a href="https://codepen.io/akey">@akey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
-
-<section id="p2">
-  <h2 id="jquery-aktextoverlay-のこと">jquery.akTextOverlay のこと</h2>
-
-<ul>
-<li><a href="https://github.com/urakey/jquery.akTextOverlay">urakey/jquery.akTextOverlay</a></li>
-</ul>
-
-<p>指定したセレクタ内の <code>&lt;img&gt;</code> の上にテキストを表示するレイヤーがスライドインします。
-スライドインする文字列は <code>&lt;img&gt;</code> の <code>data-text</code> 属性内に記述します。</p>
-
-<pre><code class="language-hyml">&lt;img data-text=&quot;スライドインさせる文字列&quot;&gt;
-</code></pre>
-
-<p>スライドインさせるレイヤーの色やスピードなどなどは Options で渡せるようにしてみました。細かいレイアウトを指定するようなスタイルはプラグイン内に含まないようにしました。</p>
-
-</section>
-
-<section id="p3">
-  <h2 id="jquery-aktextoverlay-の-options">jquery.akTextOverlay の Options</h2>
-
-<p>オプションは <a href="https://github.com/urakey/jquery.akTextOverlay/blob/master/README.md#options">ここ</a> にまとまっています。</p>
-
-</section>
-
-<hr />
-
-<p>次回以降はしばらく API から情報取得して表示する系の今まで書いたコードをプラグイン化してみます。</p>
-
-<p><em>Booklog</em> 、 <em>Flickr</em> 、 <em>Instagram</em> 、 <em>Hatena</em> あたりの予定^^</p>
-
-</section>
-]]></description>
-    </item>
-  
-    <item>
-      <title>Bash: Tab キーによる補完機能を有効にする</title>
-      <link>https://log.chocolateboard.net/homebrew-bash-completion/</link>
-      <pubDate>Mon, 24 Mar 2014 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama</author>
-      <guid>https://log.chocolateboard.net/homebrew-bash-completion/</guid>
-      <description><![CDATA[<figure><img src="https://log.chocolateboard.net/assets/images/posts/2014/03/homebrew-bash-completion/eyecatch.png" alt="" itemprop="image"></figure><p>お家 mac でも黒い画面で git しよう！と思った私のメモその2。</p>
-
-<p>Tab キーの補完機能を有効にしてみた。</p>
-
-<hr />
-
-<section id="p1">
-  <h2 id="bash-completion-をインストール">.bash-completion をインストール</h2>
-
-<ul>
-<li><a href="http://bash-completion.alioth.debian.org/">.bash-completion</a></li>
-</ul>
-
-<p>Homebrew を使っているので、<code>brew install</code> で入れました。</p>
-
-<pre><code class="language-shell">$ brew install bash-completion
-</code></pre>
-
-<p><code>.bash_profile</code> に設定を書いておく。</p>
-
-<pre><code class="language-bash">if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-</code></pre>
-
-<p><code>.bash_profile</code> を再読み込みする。</p>
-
-<pre><code class="language-shell">$ source ~/.bash_profile
-</code></pre>
-
-<p>できたー(´∀｀*)</p>
+この規約に関して、詳しくは『[Google アナリティクス サービス利用規約](http://www.google.com/analytics/terms/jp.html)』をご確認ください。
 
 </section>
 ]]></description>
